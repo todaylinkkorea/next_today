@@ -1208,6 +1208,21 @@ button { cursor: pointer; font-family: inherit; }
 
   .hero-title { font-size: 32px; }
 
+  .topbar-telegram {
+    font-size: 11px;
+    padding: 4px 8px;
+  }
+  .topbar-telegram svg {
+    width: 12px;
+    height: 12px;
+  }
+  .topbar-clock {
+    font-size: 11px;
+  }
+  .brand-logo {
+    height: 24px;
+  }
+
   .search-box {
     display: grid;
     grid-template-columns: auto 1fr;
@@ -1238,6 +1253,7 @@ button { cursor: pointer; font-family: inherit; }
   }
 
   .cards,
+  .banner-grid,
   .banner-grid-9 { grid-template-columns: 1fr; }
 
   .rank-grid { grid-template-columns: repeat(2, 1fr); }
