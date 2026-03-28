@@ -10,7 +10,14 @@ export const metadata: Metadata = {
 export const runtime = 'edge'; // Use Edge Runtime for Cloudflare Pages
 
 export default async function ArticlesPage() {
-  const posts = await getPosts(1, 20);
+  let posts: any[] = [];
+  let errorMsg = null;
+
+  try {
+    posts = await getPosts(1, 20);
+  } catch (err: any) {
+    errorMsg = err.message || JSON.stringify(err);
+  }
 
   return (
     <section className="section" aria-label="오늘링크 아티클">
@@ -22,28 +29,41 @@ export default async function ArticlesPage() {
         <div className="muted">운영 공지 및 유용한 정보 모음</div>
       </div>
       
-      {posts.length === 0 ? (
+      {errorMsg && (
+        <div style={{ padding: '20px', background: 'red', color: 'white' }}>
+          <h3>치명적 에러 발생:</h3>
+          <p>{errorMsg}</p>
+        </div>
+      )}
+
+      {posts.length === 0 && !errorMsg ? (
         <p style={{ padding: '20px 0', color: 'var(--color-muted)' }}>게시글이 존재하지 않습니다.</p>
       ) : (
         <div className="cards">
-          {posts.map((post) => (
-            <article key={post.id} className="card" style={{ display: 'flex', flexDirection: 'column', gap: '10px' }}>
-              <div dangerouslySetInnerHTML={{ __html: post.title.rendered }} style={{ fontSize: 18, fontWeight: 800 }} />
-              <div 
-                className="muted" 
-                style={{ fontSize: 14, display: '-webkit-box', WebkitLineClamp: 3, WebkitBoxOrient: 'vertical', overflow: 'hidden' }}
-                dangerouslySetInnerHTML={{ __html: post.excerpt.rendered.replace(/<[^>]+>/g, '') }} 
-              />
-              <div className="muted" style={{ fontSize: 13, marginTop: 'auto' }}>
-                {new Date(post.date).toLocaleDateString('ko-KR')}
-              </div>
-              <div className="card-actions" style={{ marginTop: '10px' }}>
-                <Link href={`/${post.slug}`} className="btn-dark" prefetch={false}>
-                  자세히 보기
-                </Link>
-              </div>
-            </article>
-          ))}
+          {posts.map((post) => {
+            try {
+              return (
+                <article key={post.id} className="card" style={{ display: 'flex', flexDirection: 'column', gap: '10px' }}>
+                  <div dangerouslySetInnerHTML={{ __html: post.title?.rendered || '제목 없음' }} style={{ fontSize: 18, fontWeight: 800 }} />
+                  <div 
+                    className="muted" 
+                    style={{ fontSize: 14, display: '-webkit-box', WebkitLineClamp: 3, WebkitBoxOrient: 'vertical', overflow: 'hidden' }}
+                    dangerouslySetInnerHTML={{ __html: (post.excerpt?.rendered || '').replace(/<[^>]+>/g, '') }} 
+                  />
+                  <div className="muted" style={{ fontSize: 13, marginTop: 'auto' }}>
+                    {post.date ? new Date(post.date).toLocaleDateString('ko-KR') : '날짜 없음'}
+                  </div>
+                  <div className="card-actions" style={{ marginTop: '10px' }}>
+                    <Link href={`/${post.slug || post.id}`} className="btn-dark" prefetch={false}>
+                      자세히 보기
+                    </Link>
+                  </div>
+                </article>
+              );
+            } catch (renderErr: any) {
+              return <div key={post.id}>렌더링 에러: {renderErr.message}</div>;
+            }
+          })}
         </div>
       )}
     </section>
