@@ -2,7 +2,6 @@ import type { Metadata } from 'next';
 import Script from 'next/script';
 import Header from '@/components/layout/Header';
 import Footer from '@/components/layout/Footer';
-import PlausibleProvider from 'next-plausible';
 import './globals.css';
 
 export const metadata: Metadata = {
@@ -47,9 +46,16 @@ export default function RootLayout({
   return (
     <html lang="ko">
       <head>
-        <PlausibleProvider domain="xn--wh1bv9k05k4kk.com" />
       </head>
       <body>
+        <Script
+          src="https://plausible.taskagenticai.com/js/pa-Ti2D660Z3HNsT98qqPWZ9.js"
+          strategy="afterInteractive"
+        />
+        <Script id="plausible-init" strategy="afterInteractive">
+          {`window.plausible=window.plausible||function(){(plausible.q=plausible.q||[]).push(arguments)},plausible.init=plausible.init||function(i){plausible.o=i||{}};
+plausible.init();`}
+        </Script>
         <Header />
         <div className="container">
           <main id="main-content">{children}</main>
