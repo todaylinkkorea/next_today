@@ -24,10 +24,14 @@ export interface WPPost {
 export async function getPosts(page: number = 1, perPage: number = 20): Promise<WPPost[]> {
   try {
     const res = await fetch(`${WP_API_URL}/posts?_embed&page=${page}&per_page=${perPage}`, {
-      next: { revalidate: 60 },
+      cache: 'no-store'
     });
     if (!res.ok) return [];
     const data = await res.json();
+    if (!Array.isArray(data)) {
+      console.error('WP API did not return an array:', data);
+      return [];
+    }
     return data;
   } catch (err) {
     console.error('Error fetching posts:', err);
@@ -38,11 +42,11 @@ export async function getPosts(page: number = 1, perPage: number = 20): Promise<
 export async function getPostBySlug(slug: string): Promise<WPPost | null> {
   try {
     const res = await fetch(`${WP_API_URL}/posts?slug=${encodeURIComponent(slug)}&_embed`, {
-      next: { revalidate: 60 },
+      cache: 'no-store'
     });
     if (!res.ok) return null;
     const data = await res.json();
-    return data.length > 0 ? data[0] : null;
+    return Array.isArray(data) && data.length > 0 ? data[0] : null;
   } catch (err) {
     console.error('Error fetching post by slug:', err);
     return null;
