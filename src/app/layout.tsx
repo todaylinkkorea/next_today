@@ -2,7 +2,7 @@ import type { Metadata } from 'next';
 import Script from 'next/script';
 import Header from '@/components/layout/Header';
 import Footer from '@/components/layout/Footer';
-import PlausibleTracker from '@/components/PlausibleTracker';
+import PlausibleProvider from 'next-plausible';
 import './globals.css';
 
 export const metadata: Metadata = {
@@ -47,9 +47,9 @@ export default function RootLayout({
   return (
     <html lang="ko">
       <head>
+        <PlausibleProvider domain="xn--wh1bv9k05k4kk.com" />
       </head>
       <body>
-        <PlausibleTracker />
         <Header />
         <div className="container">
           <main id="main-content">{children}</main>
