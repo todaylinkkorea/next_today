@@ -1364,3 +1364,35 @@ button { cursor: pointer; font-family: inherit; }
 .section { animation: fadeInUp .6s ease; animation-fill-mode: both; }
 .section:nth-child(2) { animation-delay: .1s; }
 .section:nth-child(3) { animation-delay: .2s; }
+
+/* ─── WordPress Content Styles (.wp-content) ─── */
+.wp-content h1, .wp-content h2, .wp-content h3 {
+  margin-top: 1.5em;
+  margin-bottom: 0.5em;
+  font-weight: 800;
+  color: #111827;
+}
+.wp-content h2 { font-size: 24px; }
+.wp-content h3 { font-size: 20px; }
+.wp-content p {
+  margin-bottom: 1.2em;
+  line-height: 1.8;
+  color: #374151;
+}
+.wp-content img {
+  max-width: 100%;
+  height: auto;
+  border-radius: 8px;
+  margin: 1.5rem 0;
+}
+.wp-content a {
+  color: var(--color-primary);
+  text-decoration: underline;
+}
+.wp-content ul, .wp-content ol {
+  margin-bottom: 1.2em;
+  padding-left: 20px;
+}
+.wp-content li {
+  margin-bottom: 0.5em;
+}

@@ -1,72 +1,51 @@
+import { getPosts } from '@/lib/wp';
 import type { Metadata } from 'next';
+import Link from 'next/link';
 
 export const metadata: Metadata = {
-  title: 'SEO 아티클',
-  description: '검색 최적화, 웹 성능, 구조화 데이터 등 유용한 SEO 관련 아티클을 모아놓았습니다.',
+  title: '오늘링크 Doc — 최신 정보와 아티클',
+  description: '웹사이트 최적화, 보안, 링크 모음 관련 다양한 정보를 제공나는 오늘링크 공식 문서 및 블로그입니다.',
 };
 
-const articles = [
-  {
-    badge: 'SEO',
-    emoji: '📝',
-    title: '링크 모음 사이트 SEO 최적화 가이드',
-    desc: '포털형 링크 모음 사이트를 검색엔진에 최적화하는 핵심 전략과 실전 팁을 소개합니다.',
-  },
-  {
-    badge: 'GUIDE',
-    emoji: '🔍',
-    title: '구글 검색 상위 노출을 위한 구조화 데이터',
-    desc: 'JSON-LD Schema.org를 활용한 구조화 데이터 마크업으로 검색 결과 노출을 극대화하세요.',
-  },
-  {
-    badge: 'TIPS',
-    emoji: '📊',
-    title: '사이트 속도와 Core Web Vitals 개선법',
-    desc: 'LCP, FID, CLS 지표를 개선하여 사용자 경험과 검색 랭킹을 동시에 높이는 방법을 알아봅니다.',
-  },
-  {
-    badge: 'TECH',
-    emoji: '🏗',
-    title: 'Next.js App Router와 SEO 메타데이터',
-    desc: 'Next.js의 generateMetadata, sitemap.ts, robots.ts를 활용한 현대적 SEO 구현법을 설명합니다.',
-  },
-  {
-    badge: 'STRATEGY',
-    emoji: '🎯',
-    title: '내부 링크 전략으로 크롤러 최적화하기',
-    desc: '내부 링크 구조를 체계화하여 검색 엔진 크롤러의 인덱싱 효율을 극대화합니다.',
-  },
-  {
-    badge: 'ANALYTICS',
-    emoji: '📈',
-    title: 'Plausible Analytics로 프라이버시 중심 분석',
-    desc: '쿠키 없이 가벼운 Plausible Analytics를 통해 사이트 방문 데이터를 추적하는 방법을 알아봅니다.',
-  },
-];
+export const runtime = 'edge'; // Use Edge Runtime for Cloudflare Pages
 
-export default function ArticlesPage() {
+export default async function ArticlesPage() {
+  const posts = await getPosts(1, 20);
+
   return (
-    <section className="section" aria-label="SEO 아티클">
+    <section className="section" aria-label="오늘링크 아티클">
       <div className="section-head">
         <div>
           <div className="muted">콘텐츠 허브</div>
-          <h1 style={{ fontSize: 32 }}>SEO 아티클</h1>
+          <h1 style={{ fontSize: 32 }}>오늘링크 Doc</h1>
         </div>
-        <div className="muted">검색 최적화 및 유용한 정보 모음</div>
+        <div className="muted">운영 공지 및 유용한 정보 모음</div>
       </div>
-      <div className="cards">
-        {articles.map((art, i) => (
-          <article key={i} className="card">
-            <div className="thumb">{art.emoji} 아티클</div>
-            <span className="badge">{art.badge}</span>
-            <h2 style={{ fontSize: 18, fontWeight: 800 }}>{art.title}</h2>
-            <p>{art.desc}</p>
-            <div className="card-actions">
-              <a className="btn-dark" href="#">자세히 보기</a>
-            </div>
-          </article>
-        ))}
-      </div>
+      
+      {posts.length === 0 ? (
+        <p style={{ padding: '20px 0', color: 'var(--color-muted)' }}>게시글이 존재하지 않습니다.</p>
+      ) : (
+        <div className="cards">
+          {posts.map((post) => (
+            <article key={post.id} className="card" style={{ display: 'flex', flexDirection: 'column', gap: '10px' }}>
+              <div dangerouslySetInnerHTML={{ __html: post.title.rendered }} style={{ fontSize: 18, fontWeight: 800 }} />
+              <div 
+                className="muted" 
+                style={{ fontSize: 14, display: '-webkit-box', WebkitLineClamp: 3, WebkitBoxOrient: 'vertical', overflow: 'hidden' }}
+                dangerouslySetInnerHTML={{ __html: post.excerpt.rendered.replace(/<[^>]+>/g, '') }} 
+              />
+              <div className="muted" style={{ fontSize: 13, marginTop: 'auto' }}>
+                {new Date(post.date).toLocaleDateString('ko-KR')}
+              </div>
+              <div className="card-actions" style={{ marginTop: '10px' }}>
+                <Link href={`/${post.slug}`} className="btn-dark" prefetch={false}>
+                  자세히 보기
+                </Link>
+              </div>
+            </article>
+          ))}
+        </div>
+      )}
     </section>
   );
 }
