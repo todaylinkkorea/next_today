@@ -1,7 +1,7 @@
 import type { MetadataRoute } from 'next';
 
 export default function sitemap(): MetadataRoute.Sitemap {
-  const baseUrl = 'https://todaylink.kr';
+  const baseUrl = 'https://xn--wh1bv9k05k4kk.com';
 
   return [
     {

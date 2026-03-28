@@ -5,27 +5,36 @@ import Footer from '@/components/layout/Footer';
 import './globals.css';
 
 export const metadata: Metadata = {
-  title: {
-    default: '오늘링크 — 오늘 필요한 링크를 한눈에 정리',
-    template: '%s | 오늘링크',
-  },
+  title: '오늘링크 — 주소모아, 주소월드의 새로운 기준 (링크 디렉토리)',
   description:
-    '오늘링크는 자주 찾는 사이트를 카테고리별로 정리하여 빠르게 접근할 수 있는 포털형 링크 모음 서비스입니다. 구글, 네이버, 다음, 유튜브 검색도 바로 가능합니다.',
-  keywords: ['오늘링크', '링크 모음', '포털', '즐겨찾기', '바로가기', '인기 사이트'],
-  metadataBase: new URL('https://todaylink.kr'),
+    '주소모아와 주소월드의 모든 최신 접속 정보를 실시간 통합 안내하는 오늘링크. 주소박스, 주소허브, 주소북 등 유저들이 가장 많이 찾는 대한민국 No.1 링크모음 포털 서비스입니다.',
+  keywords: [
+    '오늘링크',
+    '주소모아',
+    '주소월드',
+    '링크모음',
+    '주소모음',
+    '주소가이드',
+    '주소박스',
+    '인기사이트',
+    '바로가기',
+  ],
+  metadataBase: new URL('https://xn--wh1bv9k05k4kk.com'),
   alternates: { canonical: '/' },
   openGraph: {
     type: 'website',
-    title: '오늘링크 — 오늘 필요한 링크를 한눈에',
-    description: '자주 찾는 사이트를 한 곳에서. 구글·네이버·다음·유튜브 검색도 바로.',
-    url: 'https://todaylink.kr',
+    title: '오늘링크 — 주소모아, 주소월드의 새로운 기준',
+    description: '대한민국 No.1 링크 디렉토리. 최신 주소모아부터 인기 추천 사이트까지 한곳에서.',
+    url: 'https://xn--wh1bv9k05k4kk.com',
     siteName: '오늘링크',
     locale: 'ko_KR',
+    images: ['/assets/images/og-image.png'],
   },
   twitter: {
     card: 'summary_large_image',
-    title: '오늘링크 — 오늘 필요한 링크를 한눈에',
-    description: '자주 찾는 사이트를 한 곳에서.',
+    title: '오늘링크 — 주소모아, 주소월드의 새로운 기준',
+    description: '자주 찾는 사이트를 한 곳에서. 대한민국 No.1 링크 디렉토리',
+    images: ['/assets/images/og-image.png'],
   },
 };
 
@@ -39,7 +48,7 @@ export default function RootLayout({
       <head>
         <Script
           defer
-          data-domain="todaylink.kr"
+          data-domain="xn--wh1bv9k05k4kk.com"
           src="https://plausible.io/js/script.js"
           strategy="afterInteractive"
         />

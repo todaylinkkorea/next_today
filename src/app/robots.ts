@@ -6,6 +6,6 @@ export default function robots(): MetadataRoute.Robots {
       userAgent: '*',
       allow: '/',
     },
-    sitemap: 'https://todaylink.kr/sitemap.xml',
+    sitemap: 'https://xn--wh1bv9k05k4kk.com/sitemap.xml',
   };
 }
