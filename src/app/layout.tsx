@@ -2,6 +2,7 @@ import type { Metadata } from 'next';
 import Script from 'next/script';
 import Header from '@/components/layout/Header';
 import Footer from '@/components/layout/Footer';
+import PlausibleTracker from '@/components/PlausibleTracker';
 import './globals.css';
 
 export const metadata: Metadata = {
@@ -46,14 +47,9 @@ export default function RootLayout({
   return (
     <html lang="ko">
       <head>
-        <Script
-          defer
-          data-domain="xn--wh1bv9k05k4kk.com"
-          src="https://plausible.io/js/script.js"
-          strategy="afterInteractive"
-        />
       </head>
       <body>
+        <PlausibleTracker />
         <Header />
         <div className="container">
           <main id="main-content">{children}</main>
