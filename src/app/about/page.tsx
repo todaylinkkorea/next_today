@@ -27,8 +27,8 @@ export default function AboutPage() {
           <h2 style={{ fontSize: 20, fontWeight: 800, marginBottom: 16 }}>📍 운영 정보</h2>
           <ul className="service-info-list">
             <li><strong>서비스명:</strong> 오늘링크 (TodayLink)</li>
-            <li><strong>URL:</strong> <a href="https://todaylink.kr" target="_blank" rel="noopener noreferrer">https://todaylink.kr</a></li>
-            <li><strong>이메일:</strong> <a href="mailto:contact@todaylink.kr">contact@todaylink.kr</a></li>
+            <li><strong>URL:</strong> <a href="https://오늘링크.com" target="_blank" rel="noopener noreferrer">https://오늘링크.com</a></li>
+            <li><strong>이메일:</strong> <a href="mailto:contact@오늘링크.com">contact@오늘링크.com</a></li>
             <li><strong>운영시간:</strong> 24시간 자동 운영</li>
           </ul>
         </div>
@@ -52,8 +52,8 @@ export default function AboutPage() {
             '@context': 'https://schema.org',
             '@type': 'Organization',
             name: '오늘링크',
-            url: 'https://todaylink.kr',
-            email: 'contact@todaylink.kr',
+            url: 'https://오늘링크.com',
+            email: 'contact@오늘링크.com',
             description: '포털형 링크 모음 서비스',
           }).replace(/</g, '\\u003c'),
         }}
