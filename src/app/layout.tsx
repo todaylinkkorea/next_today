@@ -28,13 +28,13 @@ export const metadata: Metadata = {
     url: 'https://xn--wh1bv9k05k4kk.com',
     siteName: '오늘링크',
     locale: 'ko_KR',
-    images: ['/assets/images/og-image.png'],
+    images: ['/images/og-image.png'],
   },
   twitter: {
     card: 'summary_large_image',
     title: '오늘링크 — 주소모아, 주소월드의 새로운 기준',
     description: '자주 찾는 사이트를 한 곳에서. 대한민국 No.1 링크 디렉토리',
-    images: ['/assets/images/og-image.png'],
+    images: ['/images/og-image.png'],
   },
 };
 

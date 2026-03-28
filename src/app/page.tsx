@@ -23,10 +23,10 @@ const categories = [
 ];
 
 const ENGINES = {
-  google: { name: '구글', icon: '/assets/images/google_s.svg', url: 'https://www.google.com/search?q=' },
-  naver: { name: '네이버', icon: '/assets/images/naver_s.svg', url: 'https://search.naver.com/search.naver?query=' },
-  daum: { name: '다음', icon: '/assets/images/daum.svg', url: 'https://search.daum.net/search?q=' },
-  youtube: { name: '유튜브', icon: '/assets/images/youtube_s.svg', url: 'https://www.youtube.com/results?search_query=' }
+  google: { name: '구글', icon: '/images/google_s.svg', url: 'https://www.google.com/search?q=' },
+  naver: { name: '네이버', icon: '/images/naver_s.svg', url: 'https://search.naver.com/search.naver?query=' },
+  daum: { name: '다음', icon: '/images/daum.svg', url: 'https://search.daum.net/search?q=' },
+  youtube: { name: '유튜브', icon: '/images/youtube_s.svg', url: 'https://www.youtube.com/results?search_query=' }
 };
 
 export default function Home() {
@@ -86,7 +86,7 @@ export default function Home() {
 
           <div className="hero-side">
             <div className="hero-banner-wrap">
-              <Image src="/assets/images/hero_banner.png" alt="오늘링크 배너" width={800} height={400} className="hero-banner-img" priority />
+              <Image src="/images/hero_banner.png" alt="오늘링크 배너" width={800} height={400} className="hero-banner-img" priority />
             </div>
             <div className="tags" aria-label="인기 태그">
               <span className="tag"># 주소모아</span>
@@ -126,7 +126,7 @@ export default function Home() {
             { n: '인스타그램', i: 'instagram_s' }, { n: '페이스북', i: 'facebook_s' }, { n: '트위터', i: 'x_s' }
           ].map(c => (
             <a key={c.n} href="#" className="category" aria-label={c.n}>
-              <div className="category-icon" style={{background:'#fff'}}><Image src={`/assets/images/${c.i}.svg`} alt={c.n} width={40} height={40}/></div>
+              <div className="category-icon" style={{background:'#fff'}}><Image src={`/images/${c.i}.svg`} alt={c.n} width={40} height={40}/></div>
               <b className="category-text">{c.n}</b>
             </a>
           ))}
