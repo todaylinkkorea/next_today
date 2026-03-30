@@ -1310,9 +1310,18 @@ button { cursor: pointer; font-family: inherit; }
   .hero-grid {
     display: flex;
     flex-direction: column;
+    align-items: stretch;
   }
 
-  .hero-search-block { order: -1; }
+  .hero-search-block {
+    order: -1;
+    width: 100%;
+  }
+
+  .search-box {
+    width: 100%;
+    box-sizing: border-box;
+  }
 
   /* ── 카테고리 점프바 횡 스크롤 ── */
   .jump-bar {
