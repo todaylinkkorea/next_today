@@ -7,15 +7,15 @@ export const metadata: Metadata = {
   description: '웹사이트 최적화, 보안, 링크 모음 관련 다양한 정보를 제공하는 오늘링크 공식 문서 및 블로그입니다.',
 };
 
-// Edge runtime 제거 — Cloudflare Workers에서 HTTP outbound 차단 이슈
-// export const runtime = 'edge';
+export const runtime = 'edge';
 
 export default async function ArticlesPage() {
   let posts: any[] = [];
   let errorMsg: string | null = null;
 
   try {
-    posts = await getPosts(1, 20);
+    const result = await getPosts(1, 20);
+    posts = Array.isArray(result) ? result : [];
   } catch (err: any) {
     errorMsg = err?.message || String(err);
   }
