@@ -1302,6 +1302,30 @@ button { cursor: pointer; font-family: inherit; }
     align-items: flex-start;
     gap: 8px;
   }
+
+  /* ── 히어로 모바일: 텍스트 숨김, 검색창 최상단 ── */
+  .hero-text-block { display: none; }
+  .hero-side-meta  { display: none; }
+
+  .hero-grid {
+    display: flex;
+    flex-direction: column;
+  }
+
+  .hero-search-block { order: -1; }
+
+  /* ── 카테고리 점프바 횡 스크롤 ── */
+  .jump-bar {
+    flex-wrap: nowrap;
+    overflow-x: auto;
+    -webkit-overflow-scrolling: touch;
+    scrollbar-width: none;
+    padding-bottom: 4px;
+  }
+
+  .jump-bar::-webkit-scrollbar { display: none; }
+
+  .jump-chip { flex-shrink: 0; }
 }
 
 /* ─── Mobile Menu Overlay ─────────────────────────── */
