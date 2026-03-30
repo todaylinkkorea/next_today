@@ -1,4 +1,4 @@
-export const WP_API_URL = 'http://82-153-138-240.sslip.io/wp-json/wp/v2';
+export const WP_API_URL = 'http://45-32-18-169.sslip.io/wp-json/wp/v2';
 
 export interface WPPost {
   id: number;
@@ -23,7 +23,7 @@ export interface WPPost {
 
 export async function getPosts(page: number = 1, perPage: number = 20): Promise<WPPost[]> {
   try {
-    const res = await fetch(`${WP_API_URL}/posts?_embed&page=${page}&per_page=${perPage}`, {
+    const res = await fetch(`${WP_API_URL}/posts?page=${page}&per_page=${perPage}&_fields=id,date,slug,title,excerpt`, {
       cache: 'no-store'
     });
     if (!res.ok) return [];
