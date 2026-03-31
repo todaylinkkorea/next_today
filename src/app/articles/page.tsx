@@ -23,16 +23,6 @@ export default async function ArticlesPage() {
 
   return (
     <section className="section" aria-label="오늘링크 아티클">
-      <div className="section-head">
-        <div>
-          <div className="muted">콘텐츠 허브</div>
-          <h1 style={{ fontSize: 32, fontWeight: 800, letterSpacing: '-0.03em', marginTop: 4 }}>
-            오늘링크 Doc
-          </h1>
-        </div>
-        <div className="muted">운영 공지 및 유용한 정보 모음</div>
-      </div>
-
       {errorMsg && (
         <div style={{ padding: '16px 20px', background: '#fef2f2', border: '1px solid #fecaca', borderRadius: 12, color: '#b91c1c', marginBottom: 20 }}>
           <strong>API 오류:</strong> {errorMsg}

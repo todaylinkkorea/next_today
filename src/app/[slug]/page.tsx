@@ -8,10 +8,12 @@ export async function generateStaticParams() {
   return posts.map((post) => ({ slug: post.slug }));
 }
 
+export const dynamicParams = true;  // 빌드에 없는 slug도 런타임에 생성
 export const revalidate = 3600; // 1시간마다 재검증
 
-export async function generateMetadata({ params }: { params: { slug: string } }): Promise<Metadata> {
-  const post = await getPostBySlug(params.slug);
+export async function generateMetadata({ params }: { params: Promise<{ slug: string }> }): Promise<Metadata> {
+  const { slug } = await params;
+  const post = await getPostBySlug(slug);
   if (!post) return {};
   
   const rawExcerpt = post.excerpt.rendered.replace(/<[^>]+>/g, '').trim();
@@ -26,8 +28,9 @@ export async function generateMetadata({ params }: { params: { slug: string } })
   };
 }
 
-export default async function DynamicPostPage({ params }: { params: { slug: string } }) {
-  const post = await getPostBySlug(params.slug);
+export default async function DynamicPostPage({ params }: { params: Promise<{ slug: string }> }) {
+  const { slug } = await params;
+  const post = await getPostBySlug(slug);
   
   if (!post) {
     notFound();
