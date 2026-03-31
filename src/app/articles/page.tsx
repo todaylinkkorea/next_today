@@ -7,6 +7,9 @@ export const metadata: Metadata = {
   description: '웹사이트 최적화, 보안, 링크 모음 관련 다양한 정보를 제공하는 오늘링크 공식 문서 및 블로그입니다.',
 };
 
+// 빌드 시 정적 생성, 10분마다 백그라운드 재검증
+export const revalidate = 600;
+
 export default async function ArticlesPage() {
   let posts: any[] = [];
   let errorMsg: string | null = null;
