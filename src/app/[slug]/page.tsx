@@ -1,8 +1,14 @@
-import { getPostBySlug } from '@/lib/wp';
+import { getPostBySlug, getPosts } from '@/lib/wp';
 import { notFound } from 'next/navigation';
 import type { Metadata } from 'next';
 
-export const runtime = 'edge'; // Provide fast edge rendering for dynamic routes
+// 빌드 시 알려진 slug를 정적으로 미리 생성
+export async function generateStaticParams() {
+  const posts = await getPosts(1, 100);
+  return posts.map((post) => ({ slug: post.slug }));
+}
+
+export const revalidate = 3600; // 1시간마다 재검증
 
 export async function generateMetadata({ params }: { params: { slug: string } }): Promise<Metadata> {
   const post = await getPostBySlug(params.slug);

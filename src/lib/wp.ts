@@ -1,5 +1,9 @@
 export const WP_API_URL = 'https://wp.xn--wh1bv9k05k4kk.com/wp-json/wp/v2';
 
+// 캐시 TTL: 글 목록 10분, 개별 글 1시간
+const POSTS_REVALIDATE = 600;
+const POST_REVALIDATE = 3600;
+
 export interface WPPost {
   id: number;
   date: string;
@@ -24,7 +28,7 @@ export interface WPPost {
 export async function getPosts(page: number = 1, perPage: number = 20): Promise<WPPost[]> {
   try {
     const res = await fetch(`${WP_API_URL}/posts?page=${page}&per_page=${perPage}&_fields=id,date,slug,title,excerpt`, {
-      cache: 'no-store'
+      next: { revalidate: POSTS_REVALIDATE }
     });
     if (!res.ok) return [];
     const data = await res.json();
@@ -42,7 +46,7 @@ export async function getPosts(page: number = 1, perPage: number = 20): Promise<
 export async function getPostBySlug(slug: string): Promise<WPPost | null> {
   try {
     const res = await fetch(`${WP_API_URL}/posts?slug=${encodeURIComponent(slug)}&_embed`, {
-      cache: 'no-store'
+      next: { revalidate: POST_REVALIDATE }
     });
     if (!res.ok) return null;
     const data = await res.json();
