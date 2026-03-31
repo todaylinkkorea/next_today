@@ -1,4 +1,4 @@
-export const WP_API_URL = 'http://45-32-18-169.sslip.io/wp-json/wp/v2';
+export const WP_API_URL = 'https://wp.xn--wh1bv9k05k4kk.com/wp-json/wp/v2';
 
 export interface WPPost {
   id: number;
