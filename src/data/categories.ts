@@ -87,7 +87,7 @@ export const categories: Category[] = [
   {
     id: 'webtoon-panel', title: '웹툰', sub: '웹툰 플랫폼', icon: '📚',
     items: [
-      { name: '짭토끼 (티비위키)', url: 'https://ntk01.com/' },
+      { name: '짭토끼', url: 'https://ntk01.com/' },
       { name: '툰코', url: 'https://tkor104.com/' },
       { name: '블랙툰', url: 'https://blacktoon410.com/' },
       { name: '늑대닷컴', url: 'https://wfwf448.com/' },
