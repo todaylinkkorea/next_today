@@ -149,7 +149,6 @@ export const categories: Category[] = [
     items: [
       { name: 'MAXIM', url: 'https://www.maximkorea.net/' },
       { name: 'AsiaOnTop', url: 'https://asiaon.top/category/by-country/korean/' },
-      { name: '놀쟈', url: 'https://www.nz34.com/' },
       { name: 'FoamGirl', url: 'https://foamgirl.net/korea' },
       { name: 'Hot Girl', url: 'https://hotgirl.asia/' },
       { name: '4KHD', url: 'https://hett.uuss.uk/' },
