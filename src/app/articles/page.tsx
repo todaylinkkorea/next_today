@@ -1,4 +1,4 @@
-import { getPosts } from '@/lib/wp';
+import { getPosts, type WPPost } from '@/lib/wp';
 import type { Metadata } from 'next';
 import Link from 'next/link';
 
@@ -11,14 +11,14 @@ export const metadata: Metadata = {
 export const revalidate = 600;
 
 export default async function ArticlesPage() {
-  let posts: any[] = [];
+  let posts: WPPost[] = [];
   let errorMsg: string | null = null;
 
   try {
     const result = await getPosts(1, 20);
     posts = Array.isArray(result) ? result : [];
-  } catch (err: any) {
-    errorMsg = err?.message || String(err);
+  } catch (err: unknown) {
+    errorMsg = err instanceof Error ? err.message : String(err);
   }
 
   return (

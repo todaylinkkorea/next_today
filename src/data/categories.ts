@@ -15,14 +15,14 @@ export const categories: Category[] = [
   {
     id: 'adult-panel', title: '성인', sub: '성인 콘텐츠 사이트', icon: '🔞',
     items: [
-      { name: '야스닷컴', url: 'https://yasyadong.tv/' },
+      { name: '야스닷컴', url: 'https://yasyadong01.tv/' },
       { name: '(AI)오늘보지', url: 'https://cu2day.com/' },
       { name: '다크걸', url: 'https://darkgirl8.com/' },
       { name: '야동파티', url: 'https://ydparty06.net/' },
       { name: '야동코리아', url: 'https://www.yako05.com/' },
       { name: '혼딸파티', url: 'https://ddparty13.org/' },
       { name: '밍키넷', url: 'https://mingky13.net/' },
-      { name: '조개모아', url: 'https://www.jogemoa03.com/' },
+      { name: '딸플릭스', url: 'https://kr11.ddal.xyz/' },
       { name: '밤포탈', url: 'https://bampt3.com/' },
       { name: 'AV19', url: 'https://av19.biz/' },
     ],

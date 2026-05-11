@@ -22,7 +22,7 @@ export interface WPPost {
   featured_media: number;
   categories: number[];
   tags: number[];
-  _embedded?: any;
+  _embedded?: Record<string, unknown>;
 }
 
 export async function getPosts(page: number = 1, perPage: number = 20): Promise<WPPost[]> {
