@@ -47,7 +47,7 @@ export const categories: Category[] = [
     items: [
       { name: '티비위키', url: 'https://tvwiki.app/' },
       { name: '티비몬', url: 'https://tvmon.site/' },
-      { name: '후후티비', url: 'https://hoohootv382.xyz/' },
+      { name: '후후티비', url: 'https://hn.hoohootv396.xyz/' },
       { name: '티비룸', url: 'https://tvroom.cc/' },
       { name: '제크티비', url: 'https://zectv1.com/' },
       { name: '무비킹', url: 'https://mvking.net/' },
