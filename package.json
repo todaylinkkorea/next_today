@@ -10,7 +10,7 @@
   },
   "dependencies": {
     "@plausible-analytics/tracker": "^0.4.4",
-    "next": "15.5.15",
+    "next": "15.5.16",
     "react": "19.2.4",
     "react-dom": "19.2.4"
   },
@@ -20,7 +20,7 @@
     "@types/react": "^19",
     "@types/react-dom": "^19",
     "eslint": "^9",
-    "eslint-config-next": "15.5.15",
+    "eslint-config-next": "15.5.16",
     "typescript": "^5"
   }
 }
