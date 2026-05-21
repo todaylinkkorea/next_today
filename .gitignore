@@ -49,3 +49,10 @@ next-env.d.ts
 !.dev.vars.example
 
 !.env.example
+
+# SEO audit artifacts
+/ACTION-PLAN.md
+/FULL-AUDIT-REPORT.md
+/*report*.html
+/*results.json
+

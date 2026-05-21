@@ -1,4 +1,5 @@
 import { categories } from '@/data/categories';
+import JumpBar from './JumpBar';
 
 export default function RankSection() {
   return (
@@ -11,17 +12,7 @@ export default function RankSection() {
         <div className="muted">클릭 시 바로 이동할 수 있는 랭킹형 목록</div>
       </div>
 
-      <nav className="jump-bar" aria-label="카테고리 빠른 이동">
-        {categories.map((cat, i) => (
-          <a
-            key={cat.id}
-            className={`jump-chip${i === 0 ? ' active' : ''}`}
-            href={`#${cat.id}`}
-          >
-            {cat.title}
-          </a>
-        ))}
-      </nav>
+      <JumpBar categories={categories} />
 
       <div className="rank-grid">
         {categories.map((cat) => (
@@ -37,9 +28,9 @@ export default function RankSection() {
                 <a
                   key={idx}
                   className="rank-item"
-                  href={item.url}
+                  href={`/exit?url=${encodeURIComponent(item.url)}`}
                   target="_blank"
-                  rel="noopener noreferrer"
+                  rel="nofollow noopener noreferrer"
                 >
                   <div className="rank-left">
                     <div className="rank-num">{idx + 1}</div>

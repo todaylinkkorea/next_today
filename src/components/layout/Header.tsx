@@ -39,12 +39,12 @@ export default function Header() {
       <div className="topbar-inner">
         <div className="topbar-left">
           <a href="https://t.me/todaylink" className="topbar-telegram" target="_blank" rel="noopener noreferrer" aria-label="텔레그램 문의">
-            <img src="/images/telegram.svg" alt="" width={14} height={14} />
+            <Image src="/images/telegram.svg" alt="텔레그램 로고" width={14} height={14} />
             텔레그램 문의
           </a>
         </div>
         <Link href="/" className="brand" aria-label="오늘링크 홈으로 이동">
-          <img src="/images/logo.png" alt="오늘링크" className="brand-logo" />
+          <Image src="/images/logo.png" alt="오늘링크" className="brand-logo" width={140} height={36} priority />
         </Link>
         <div className="topbar-right">
           <div className="topbar-clock" aria-label="현재 시각">

@@ -1,9 +1,10 @@
 import type { MetadataRoute } from 'next';
+import { getPosts } from '@/lib/wp';
 
-export default function sitemap(): MetadataRoute.Sitemap {
+export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
   const baseUrl = 'https://xn--wh1bv9k05k4kk.com';
 
-  return [
+  const staticRoutes: MetadataRoute.Sitemap = [
     {
       url: baseUrl,
       lastModified: new Date(),
@@ -23,4 +24,19 @@ export default function sitemap(): MetadataRoute.Sitemap {
       priority: 0.5,
     },
   ];
+
+  try {
+    const posts = await getPosts(1, 100);
+    const postRoutes: MetadataRoute.Sitemap = posts.map((post) => ({
+      url: `${baseUrl}/${post.slug}`,
+      lastModified: post.date ? new Date(post.date) : new Date(),
+      changeFrequency: 'weekly',
+      priority: 0.6,
+    }));
+
+    return [...staticRoutes, ...postRoutes];
+  } catch (err) {
+    console.error('Error generating dynamic sitemap:', err);
+    return staticRoutes;
+  }
 }

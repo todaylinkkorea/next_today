@@ -24,7 +24,7 @@ export const metadata: Metadata = {
   openGraph: {
     type: 'website',
     title: '오늘링크 — 주소모아, 주소월드의 새로운 기준',
-    description: '대한민국 No.1 링크 디렉토리. 최신 주소모아부터 인기 추천 사이트까지 한곳에서.',
+    description: '대한민국 No.1 링크 디렉토리 오늘링크. 주소모아, 주소월드, 주소박스, 주소북 등 유저들이 자주 찾는 인기 사이트의 최신 접속 주소를 실시간 안내하며 빠르고 안전하게 연결합니다.',
     url: 'https://xn--wh1bv9k05k4kk.com',
     siteName: '오늘링크',
     locale: 'ko_KR',
@@ -33,7 +33,7 @@ export const metadata: Metadata = {
   twitter: {
     card: 'summary_large_image',
     title: '오늘링크 — 주소모아, 주소월드의 새로운 기준',
-    description: '자주 찾는 사이트를 한 곳에서. 대한민국 No.1 링크 디렉토리',
+    description: '대한민국 No.1 링크 디렉토리 오늘링크. 주소모아, 주소월드, 주소박스, 주소북 등 유저들이 자주 찾는 인기 사이트의 최신 접속 주소를 실시간 안내하며 빠르고 안전하게 연결합니다.',
     images: ['/images/og-image.png'],
   },
 };
@@ -48,6 +48,37 @@ export default function RootLayout({
       <head>
       </head>
       <body>
+        <script
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{
+            __html: JSON.stringify({
+              '@context': 'https://schema.org',
+              '@graph': [
+                {
+                  '@type': 'WebSite',
+                  '@id': 'https://xn--wh1bv9k05k4kk.com/#website',
+                  'url': 'https://xn--wh1bv9k05k4kk.com',
+                  'name': '오늘링크',
+                  'description': '주소모아와 주소월드의 모든 최신 접속 정보를 실시간 통합 안내하는 오늘링크',
+                  'publisher': {
+                    '@id': 'https://xn--wh1bv9k05k4kk.com/#organization'
+                  },
+                  'inLanguage': 'ko-KR'
+                },
+                {
+                  '@type': 'Organization',
+                  '@id': 'https://xn--wh1bv9k05k4kk.com/#organization',
+                  'name': '오늘링크',
+                  'url': 'https://xn--wh1bv9k05k4kk.com',
+                  'logo': 'https://xn--wh1bv9k05k4kk.com/images/logo.png',
+                  'sameAs': [
+                    'https://t.me/todaylink'
+                  ]
+                }
+              ]
+            }).replace(/</g, '\\u003c'),
+          }}
+        />
         <Script
           src="https://plausible.taskagenticai.com/js/pa-Ti2D660Z3HNsT98qqPWZ9.js"
           strategy="afterInteractive"
