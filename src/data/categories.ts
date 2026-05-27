@@ -19,11 +19,11 @@ export const categories: Category[] = [
       { name: '(AI)오늘보지', url: 'https://cu2day.com/' },
       { name: '다크걸', url: 'https://darkgirl8.com/' },
       { name: '야동투어', url: 'https://ydtour34.sbs/' },
-      { name: '야동파티', url: 'https://ydparty06.net/' },
       { name: '야동코리아', url: 'https://www.yako05.com/' },
       { name: '혼딸파티', url: 'https://ddparty13.org/' },
       { name: '밍키넷', url: 'https://mingky13.net/' },
       { name: '밤포탈', url: 'https://bampt3.com/' },
+      { name: '딸플릭스', url: 'https://kr13.ddal.xyz/' },
     ],
   },
   {
@@ -41,11 +41,12 @@ export const categories: Category[] = [
   {
     id: 'webtoon-panel', title: '웹툰', sub: '웹툰 플랫폼', icon: '📚',
     items: [
-      { name: '짭토끼', url: 'https://newto06.com/' },
+      { name: '짭토끼', url: 'https://newto07.com/' },
       { name: '툰코', url: 'https://tkor120.com/' },
       { name: '블랙툰', url: 'https://blacktoon410.com/' },
       { name: '늑대닷컴', url: 'https://wftoon210.com/' },
       { name: '나미툰', url: 'https://namee100.com/' },
+      { name: '야툰', url: 'https://yatoon232.com/' },
     ],
   },
   {
