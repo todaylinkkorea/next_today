@@ -15,13 +15,13 @@ export const categories: Category[] = [
   {
     id: 'adult-panel', title: '성인', sub: '성인 콘텐츠 사이트', icon: '🔞',
     items: [
-      { name: '야스닷컴', url: 'https://yasyadong01.tv/' },
+      { name: '야스닷컴', url: 'https://yasyadong02.tv/' },
       { name: '(AI)오늘보지', url: 'https://cu2day.com/' },
       { name: '다크걸', url: 'https://darkgirl8.com/' },
-      { name: '야동투어', url: 'https://ydtour34.sbs/' },
+      { name: '야동투어', url: 'https://ydtour36.sbs/' },
       { name: '야동코리아', url: 'https://www.yako05.com/' },
       { name: '혼딸파티', url: 'https://ddparty13.org/' },
-      { name: '밍키넷', url: 'https://mingky13.net/' },
+      { name: '조개모아', url: 'https://www.jogemoa04.com/' },
       { name: '밤포탈', url: 'https://bampt3.com/' },
       { name: '딸플릭스', url: 'https://kr13.ddal.xyz/' },
     ],
@@ -41,10 +41,11 @@ export const categories: Category[] = [
   {
     id: 'webtoon-panel', title: '웹툰', sub: '웹툰 플랫폼', icon: '📚',
     items: [
-      { name: '짭토끼', url: 'https://newto07.com/' },
+      { name: '늑대닷컴', url: 'https://wftoon210.com/' },
+      { name: '뉴토끼', url: 'https://newto09.com/' },
+      { name: '마나토끼', url: 'https://mato09.com/' },
       { name: '툰코', url: 'https://tkor120.com/' },
       { name: '블랙툰', url: 'https://blacktoon410.com/' },
-      { name: '늑대닷컴', url: 'https://wftoon210.com/' },
       { name: '나미툰', url: 'https://namee100.com/' },
       { name: '야툰', url: 'https://yatoon232.com/' },
     ],
@@ -106,7 +107,7 @@ export const categories: Category[] = [
     items: [
       { name: 'SpankBang', url: 'https://spankbang.com/' },
       { name: 'XHAMSTER', url: 'https://xhamster.com/' },
-      { name: 'STRIPCHAT', url: 'https://ko.stripchat.com//' },
+      { name: 'STRIPCHAT', url: 'https://ko.stripchat.com/' },
       { name: 'EPORNER', url: 'https://www.eporner.com/' },
       { name: 'RAB튜브', url: 'https://www.rabtube.site/' },
       { name: '피그AV', url: 'https://pigav.ws/' },
@@ -153,18 +154,6 @@ export const categories: Category[] = [
       { name: '아프리카티비', url: 'https://www.sooplive.com/' },
       { name: '셀럽티비', url: 'https://www.celuvtv.co.kr/' },
       { name: '달라', url: 'https://www.dallalive.com/' },
-    ],
-  },
-  {
-    id: 'torrent-panel', title: '토렌트', sub: '파일 공유 사이트', icon: '📦',
-    items: [
-      { name: '토렌트큐큐', url: 'https://torrentqq418.com/' },
-      { name: '토렌트씨', url: 'https://torrentsee337.com/' },
-      { name: '토렌트썸', url: 'https://torrentsome246.com/' },
-      { name: '토렌트탑', url: 'https://torrenttop205.com/' },
-      { name: '토렌트티티', url: 'https://torrenttt232.top/' },
-      { name: '토렌트좋다', url: 'https://torrentzota184.com/' },
-      { name: '토렌트밤', url: 'https://torrentbam231.top/' },
     ],
   },
   {
