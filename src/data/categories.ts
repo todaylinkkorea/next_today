@@ -29,6 +29,7 @@ export const categories: Category[] = [
   {
     id: 'movie-panel', title: '영화/드라마', sub: '영상 콘텐츠 사이트', icon: '🎬',
     items: [
+      { name: '티비위키', url: 'https://tvwiki25.net/' },
       { name: '티비룸', url: 'https://tvroom.me/' },
       { name: '티비핫', url: 'https://tvhot.store/' },
       { name: '무비킹', url: 'https://mvking.net/' },
