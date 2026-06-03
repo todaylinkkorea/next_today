@@ -15,7 +15,7 @@ export const categories: Category[] = [
   {
     id: 'adult-panel', title: '성인', sub: '성인 콘텐츠 사이트', icon: '🔞',
     items: [
-      { name: '야스닷컴', url: 'https://yasyadong02.tv/' },
+      { name: '야스닷컴', url: 'https://yasyadong01.tv/' },
       { name: '(AI)오늘보지', url: 'https://cu2day.com/' },
       { name: '다크걸', url: 'https://darkgirl8.com/' },
       { name: '야동투어', url: 'https://ydtour36.sbs/' },
@@ -29,21 +29,20 @@ export const categories: Category[] = [
   {
     id: 'movie-panel', title: '영화/드라마', sub: '영상 콘텐츠 사이트', icon: '🎬',
     items: [
-      { name: '티비위키', url: 'https://tvwiki23.net/' },
-      { name: '후후티비', url: 'https://bv.hoohootv404.xyz/' },
       { name: '티비룸', url: 'https://tvroom.me/' },
-      { name: '무비킹', url: 'https://mvking.net/' },
       { name: '티비핫', url: 'https://tvhot.store/' },
+      { name: '무비킹', url: 'https://mvking.net/' },
       { name: '별별티비', url: 'https://bbtv86.com/' },
+      { name: '후후티비', url: 'https://bv.hoohootv404.xyz/' },
       { name: '애니라이프', url: 'https://anilife.app/' },
     ],
   },
   {
     id: 'webtoon-panel', title: '웹툰', sub: '웹툰 플랫폼', icon: '📚',
     items: [
-      { name: '늑대닷컴', url: 'https://wftoon210.com/' },
-      { name: '뉴토끼', url: 'https://newto09.com/' },
-      { name: '마나토끼', url: 'https://mato09.com/' },
+      { name: '늑대닷컴', url: 'https://wftoon213.com/' },
+      { name: '뉴토끼', url: 'https://newto10.com/' },
+      { name: '마나토끼', url: 'https://mato10.com/' },
       { name: '툰코', url: 'https://tkor120.com/' },
       { name: '블랙툰', url: 'https://blacktoon410.com/' },
       { name: '나미툰', url: 'https://namee100.com/' },
@@ -56,7 +55,7 @@ export const categories: Category[] = [
       { name: '매직티비', url: 'https://kalae.com/' },
       { name: '헐크티비', url: 'https://www.hulk24.com/' },
       { name: '전국티비', url: 'https://jgtv24.com/' },
-      { name: '빠른티비', url: 'https://quick-tv.com/' },
+      { name: '빠른티비', url: 'https://quick-tv.com/main_index/' },
       { name: '코난티비', url: 'https://conan-tv.com/' },
       { name: '블랙티비', url: 'https://blacktv8.com/' },
       { name: '네네티비', url: 'https://nntv01.com/' },
@@ -124,7 +123,6 @@ export const categories: Category[] = [
       { name: '로맨스몰', url: 'https://romancemall.co.kr/' },
       { name: '바나나몰', url: 'https://www.bananamall.co.kr/' },
       { name: '조이앤조이', url: 'https://www.joynjoy.com/' },
-      { name: '뜨밤', url: 'https://ddbammall.com/19m.php' },
       { name: '가지몰', url: 'https://gajimall.net/' },
       { name: '팔팔그라', url: 'https://88gra.shop/' },
     ],
