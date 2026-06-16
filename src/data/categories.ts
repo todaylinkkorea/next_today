@@ -17,9 +17,9 @@ export const categories: Category[] = [
     items: [
       { name: '야스닷컴', url: 'https://yasyadong01.tv/' },
       { name: '(AI)오늘보지', url: 'https://cu2day.com/' },
-      { name: 'AV19', url: ' https://av19d.com/' },
+      { name: 'AV19', url: 'https://av19d.com/' },
       { name: '다크걸', url: 'https://darkgirl11.com/' },
-      { name: '야동투어', url: 'https://ydtour38.sbs/' },
+      { name: '야동투어', url: 'https://ydtour40.sbs/' },
       { name: '야동코리아', url: 'https://www.yako06.com/' },
       { name: '야동파티', url: 'https://ydparty02.tv/' },
       { name: '조개모아', url: 'https://www.jogemoa05.com/' },
@@ -30,24 +30,24 @@ export const categories: Category[] = [
   {
     id: 'movie-panel', title: '영화/드라마', sub: '영상 콘텐츠 사이트', icon: '🎬',
     items: [
-      { name: '티비위키', url: 'https://tvwiki300.com/' },
-      { name: '티비룸', url: 'https://tvroom.me/' },
-      { name: '티비핫', url: 'https://tvhot1.com/' },
+      { name: '티비위키', url: 'https://tvwiki28.net/' },
+      { name: '티비룸', url: 'https://tvroom13.org/' },
+      { name: '티비핫', url: 'https://tvhot2.com/' },
       { name: '무비킹', url: 'https://mvking.mov/' },
-      { name: '후후티비', url: 'https://bv.hoohootv404.xyz/' },
+      { name: '후후티비', url: 'https://hk.hoohootv414.xyz/' },
       { name: '애니라이프', url: 'https://anilife.app/' },
     ],
   },
   {
     id: 'webtoon-panel', title: '웹툰', sub: '웹툰 플랫폼', icon: '📚',
     items: [
-      { name: '늑대닷컴', url: 'https://wfwf464.com/' },
-      { name: '뉴토끼', url: 'https://sbxh5.com/' },
+      { name: '늑대닷컴', url: 'https://wfwf467.com/' },
+      { name: '뉴토끼', url: 'https://sbxh7.com/' },
       { name: '마나토끼', url: 'https://mato13.com/' },
-      { name: '툰코', url: 'https://tkor125.com/' },
+      { name: '툰코', url: 'https://tkor127.com/' },
       { name: '블랙툰', url: 'https://blacktoon412.com/' },
       { name: '나미툰', url: 'https://namee100.com/' },
-      { name: '야툰', url: 'https://yatoon233.com/' },
+      { name: '야툰', url: 'https://yatoon235.com/' },
     ],
   },
   {
@@ -60,7 +60,6 @@ export const categories: Category[] = [
       { name: '블랙티비', url: 'https://blacktv8.com/' },
       { name: '네네티비', url: 'https://nntv01.com/' },
       { name: '마징가티비', url: 'https://litfusegroup.com/' },
-      { name: '챔스티비', url: 'https://sportsentrysolutions.com/' },
     ],
   },
   {
@@ -102,11 +101,11 @@ export const categories: Category[] = [
   {
     id: 'foreign-panel', title: '해외성인', sub: '해외 성인 사이트', icon: '🌐',
     items: [
+      { name: 'Pornhub', url: 'https://fr.pornhub.org//' },
       { name: 'SpankBang', url: 'https://spankbang.com/' },
-      { name: 'XHAMSTER', url: 'https://xhamster.com/' },
+      { name: 'XHAMSTER', url: 'https://ko.xhname.com/' },
       { name: 'STRIPCHAT', url: 'https://ko.stripchat.com/' },
       { name: 'EPORNER', url: 'https://www.eporner.com/' },
-      { name: 'RAB튜브', url: 'https://www.rabtube.site/' },
       { name: 'Beeg', url: 'https://beeg.com/' },
     ],
   },
