@@ -18,7 +18,7 @@ export const categories: Category[] = [
       { name: '야스닷컴', url: 'https://yasyadong02.tv/' },
       { name: 'AV19', url: 'https://av1919.tv/' },
       { name: '다크걸', url: 'https://darkgirl13.com/' },
-      { name: '야동코리아', url: 'https://www.yako11.com/' },
+      { name: '야동코리아', url: 'https://www.yako12.com/' },
       { name: '야동파티', url: 'https://ydparty04.tv/' },
       { name: '야동위키', url: 'https://19wiki4.com/' },
       { name: '딸플릭스', url: 'https://kr15.ddal.xyz/' },
@@ -27,7 +27,7 @@ export const categories: Category[] = [
   {
     id: 'movie-panel', title: '영화/드라마', sub: '영상 콘텐츠 사이트', icon: '🎬',
     items: [
-      { name: '티비위키', url: 'https://tvwiki37.net/' },
+      { name: '티비위키', url: 'https://tvwiki38.net/' },
       { name: '티비룸', url: 'https://tvroom19.org/' },
       { name: '티비핫', url: 'https://tvhot2.com/' },
       { name: '티비팡', url: 'https://tvpang.live/' },
@@ -39,11 +39,11 @@ export const categories: Category[] = [
   {
     id: 'webtoon-panel', title: '웹툰', sub: '웹툰 플랫폼', icon: '📚',
     items: [
+      { name: '늑대닷컴', url: 'https://wfwf419.com/' },
       { name: '뉴토끼', url: 'https://sbxh9.com/' },
-      { name: '짭토끼', url: 'https://newto21.com/' },
-      { name: '마나토끼', url: 'https://mato21.com/' },
-      { name: '늑대닷컴', url: 'https://wfwf415.com/' },
-      { name: '툰코', url: 'https://tkor134.com/' },
+      { name: '짭토끼', url: 'https://toki30.com/' },
+      { name: '해피툰', url: 'https://happytoon02.com/' },
+      { name: '툰코', url: 'https://tkor135.com/' },
       { name: '블랙툰', url: 'https://blacktoon416.com/' },
       { name: '야툰', url: 'https://yatoon240.com/' },
     ],
@@ -63,10 +63,10 @@ export const categories: Category[] = [
   {
     id: 'opi-panel', title: '오피/유흥', sub: '유흥 정보 사이트', icon: '🏮',
     items: [
-      { name: '오피가이드', url: 'https://opga039.com/' },
-      { name: '오피매니아', url: 'https://opmm04.com/' },
-      { name: '오피스타', url: 'https://opmart19.com/' },
-      { name: '오피아트', url: 'https://dkxm10.com/' },
+      { name: '오피가이드', url: 'https://opga040.com/' },
+      { name: '오피매니아', url: 'https://opmm05.com/' },
+      { name: '오피스타', url: 'https://opmart20.com/' },
+      { name: '오피파크', url: 'https://oppark3.com//' },
       { name: '헬로밤', url: 'https://hlbam30.com/' },
       { name: '밤의민족', url: 'https://newbm35.com/' },
       { name: '키탐넷', url: 'https://kisstime4.net/' },
@@ -75,12 +75,12 @@ export const categories: Category[] = [
   {
     id: 'verify-panel', title: '먹튀검증', sub: '먹튀 검증 사이트', icon: '🛡',
     items: [
+      { name: '온카판', url: 'https://oncapan.com/' },
       { name: '꽁타', url: 'https://xn--hs0b684d.net/certified/banner' },
       { name: '토토핫', url: 'https://www.totohot.net/' },
       { name: '배팅의민족', url: 'https://119sh.com/front.php' },
       { name: '먹튀중개소', url: 'https://www.mukjungso.com/' },
       { name: '토토와우', url: 'https://totowow.com/' },
-      { name: '온카판', url: 'https://oncapan.com/' },
     ],
   },
   {
