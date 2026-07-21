@@ -16,7 +16,7 @@ export const categories: Category[] = [
     id: 'adult-panel', title: '성인', sub: '성인 콘텐츠 사이트', icon: '🔞',
     items: [
       { name: '야스닷컴', url: 'https://yasyadong02.tv/' },
-      { name: 'AV19', url: 'https://av1919.tv/' },
+      { name: 'AV19', url: 'https://av19t.com/' },
       { name: '다크걸', url: 'https://darkgirl14.com/' },
       { name: '야동코리아', url: 'https://www.yako14.com/' },
       { name: '야동파티', url: 'https://ydparty04.tv/' },
@@ -27,8 +27,8 @@ export const categories: Category[] = [
   {
     id: 'movie-panel', title: '영화/드라마', sub: '영상 콘텐츠 사이트', icon: '🎬',
     items: [
-      { name: '티비위키', url: 'https://tvwiki38.net/' },
-      { name: '티비룸', url: 'https://tvroom19.org/' },
+      { name: '티비위키', url: 'https://tvwiki7.store/' },
+      { name: '티비룸', url: 'https://tvroom20.org/' },
       { name: '티비핫', url: 'https://tvhot2.com/' },
       { name: '티비팡', url: 'https://tvpang.live/' },
       { name: '바다티비', url: 'https://bada79.com/' },
@@ -39,11 +39,11 @@ export const categories: Category[] = [
   {
     id: 'webtoon-panel', title: '웹툰', sub: '웹툰 플랫폼', icon: '📚',
     items: [
-      { name: '늑대닷컴', url: 'https://wfwf419.com/' },
+      { name: '늑대닷컴', url: 'https://wfwf422.com/' },
       { name: '뉴토끼', url: 'https://sbxh9.com/' },
       { name: '짭토끼', url: 'https://toki30.com/' },
       { name: '해피툰', url: 'https://happytoon02.com/' },
-      { name: '툰코', url: 'https://tkor135.com/' },
+      { name: '툰코', url: 'https://tkor137.com/' },
       { name: '블랙툰', url: 'https://blacktoon416.com/' },
       { name: '야툰', url: 'https://yatoon240.com/' },
     ],
