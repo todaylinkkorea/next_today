@@ -87,7 +87,6 @@ export const categories: Category[] = [
   {
     id: 'toto-panel', title: '토토/카지노', sub: '베팅 사이트', icon: '🎰',
     items: [
-      { name: 'FOMO', url: 'https://kr.fomo.io' },
       { name: '플러쉬', url: 'https://flush.com/' },
       { name: '피나클', url: 'https://pinnacle.com/ko/' },
       { name: '비씨게임', url: 'https://bc.game/ko' },
