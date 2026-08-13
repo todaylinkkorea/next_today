@@ -63,19 +63,6 @@ export default function Home() {
         </div>
       </section>
 
-      <section className="section" id="banners" aria-label="추천 배너">
-        <div className="section-head">
-          <div><h2>추천 배너</h2></div>
-        </div>
-        <div className="banner-grid">
-          <a href="#" className="banner-item banner-item--lg banner-pink-1"><div className="banner-label banner-label-pink-1">FEATURED 01</div><div className="banner-title">추천 배너 01</div><div className="banner-desc banner-desc-pink">화이트와 핑크 조합의 대표 배너 스타일</div></a>
-          <a href="#" className="banner-item banner-item--lg banner-pink-2"><div className="banner-label banner-label-pink-2">FEATURED 02</div><div className="banner-title">추천 배너 02</div><div className="banner-desc banner-desc-pink">부드럽고 밝은 톤으로 시선이 가는 배너</div></a>
-          <a href="#" className="banner-item banner-item--lg banner-pink-3"><div className="banner-label banner-label-pink-3">FEATURED 03</div><div className="banner-title">추천 배너 03</div><div className="banner-desc banner-desc-pink">텍스트형으로도 예쁘게 보이는 상단 배너</div></a>
-          <a href="#" className="banner-item banner-item--lg banner-pink-1"><div className="banner-label banner-label-pink-1">FEATURED 04</div><div className="banner-title">추천 배너 04</div><div className="banner-desc banner-desc-pink">화이트와 핑크 조합의 대표 배너 스타일</div></a>
-          <a href="#" className="banner-item banner-item--lg banner-pink-2"><div className="banner-label banner-label-pink-2">FEATURED 05</div><div className="banner-title">추천 배너 05</div><div className="banner-desc banner-desc-pink">부드럽고 밝은 톤으로 시선이 가는 배너</div></a>
-          <a href="#" className="banner-item banner-item--lg banner-pink-3"><div className="banner-label banner-label-pink-3">FEATURED 06</div><div className="banner-title">추천 배너 06</div><div className="banner-desc banner-desc-pink">텍스트형으로도 예쁘게 보이는 상단 배너</div></a>
-        </div>
-      </section>
 
       <section className="section" id="categories" aria-label="주요 카테고리">
         <div className="section-head"><div><h2>주요 카테고리</h2></div></div>
@@ -95,13 +82,6 @@ export default function Home() {
       {/* Render Server-Side RankSection which utilizes client-side JumpBar */}
       <RankSection />
 
-      <section className="section" id="bottom-banners" aria-label="하단 배너" style={{marginTop: '20px'}}>
-        <div className="banner-grid" style={{gridTemplateColumns: 'repeat(2, 1fr)'}}>
-          {[1,2,3,1,2,3,1,2,3,1].map((b, idx) => (
-            <a key={idx} href="#" className={`banner-item banner-item--md banner-pink-md-${b}`}><div className="banner-title">배너 {idx+1}</div></a>
-          ))}
-        </div>
-      </section>
     </>
   );
 }

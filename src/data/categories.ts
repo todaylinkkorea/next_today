@@ -87,7 +87,6 @@ export const categories: Category[] = [
   {
     id: 'toto-panel', title: '토토/카지노', sub: '베팅 사이트', icon: '🎰',
     items: [
-      { name: '플러쉬', url: 'https://flush.com/' },
       { name: '피나클', url: 'https://pinnacle.com/ko/' },
       { name: '비씨게임', url: 'https://bc.game/ko' },
       { name: 'STAKE', url: 'https://stake.com/ko' },
@@ -99,12 +98,12 @@ export const categories: Category[] = [
     id: 'foreign-panel', title: '해외성인', sub: '해외 성인 사이트', icon: '🌐',
     items: [
       { name: 'Pornhub', url: 'https://fr.pornhub.org/' },
-      { name: 'XVIDROS', url: 'https://xvideos-k7.com/' },
-      { name: 'XHAMSTER', url: 'https://ko.xhname.com/' },
+      { name: 'Spankbang', url: 'https://spankbang.party/' },
+      { name: 'XHAMSTER', url: 'https://xhtotal.com/' },
+      { name: 'XVIDEO', url: 'https://xvideos-k7.com/' },
       { name: 'AV탑걸', url: 'https://kr45.topgirl.co/' },
       { name: 'STRIPCHAT', url: 'https://ko.stripchat.com/' },
       { name: 'EPORNER', url: 'https://www.eporner.com/' },
-      { name: 'Beeg', url: 'https://beeg.com/' },
     ],
   },
   {
