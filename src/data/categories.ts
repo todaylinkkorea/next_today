@@ -13,11 +13,23 @@ export interface Category {
 
 export const categories: Category[] = [
   {
+    id: 'movie-panel', title: '영화/드라마', sub: '영상 콘텐츠 사이트', icon: '🎬',
+    items: [
+      { name: '티비위키', url: 'https://tvwiki.store/' },
+      { name: '티비룸', url: 'https://tvroom27.org/' },
+      { name: '티비몬', url: 'https://tvmon1.com/' },
+      { name: '티비팡', url: 'https://tvpang.live/' },
+      { name: '바다티비', url: 'https://bada34.kr/' },
+      { name: '무비킹', url: 'https://mvking17.org/' },
+      { name: '애니24', url: 'https://ani.ohli24.com/' },
+    ],
+  },
+  {
     id: 'adult-panel', title: '성인', sub: '성인 콘텐츠 사이트', icon: '🔞',
     items: [
       { name: '야스닷컴', url: 'https://yasyadong02.tv/' },
       { name: 'AV19', url: 'https://av19t.com/' },
-      { name: '다크걸', url: 'https://darkgirl16.com/' },
+      { name: '다크걸', url: 'https://darkgirl17.com/' },
       { name: '밍키넷', url: 'https://mingky07.tv/' },
       { name: '야동파티', url: 'https://ydparty06.tv/' },
       { name: '야동위키', url: 'https://19wiki6.com/' },
@@ -25,15 +37,15 @@ export const categories: Category[] = [
     ],
   },
   {
-    id: 'movie-panel', title: '영화/드라마', sub: '영상 콘텐츠 사이트', icon: '🎬',
+    id: 'foreign-panel', title: '해외성인', sub: '해외 성인 사이트', icon: '🌐',
     items: [
-      { name: '티비위키', url: 'https://tvwiki.store/' },
-      { name: '티비룸', url: 'https://tvroom26.org/' },
-      { name: '티비몬', url: 'https://tvmon1.com/' },
-      { name: '티비팡', url: 'https://tvpang.live/' },
-      { name: '바다티비', url: 'https://bada34.kr/' },
-      { name: '무비킹', url: 'https://mvking17.org/' },
-      { name: '애니라이프', url: 'https://anilife.app/' },
+      { name: 'Pornhub', url: 'https://fr.pornhub.org/' },
+      { name: 'Spankbang', url: 'https://spankbang.party/' },
+      { name: 'XHAMSTER', url: 'https://xhtotal.com/' },
+      { name: 'XVIDEO', url: 'https://xvideos-k7.com/' },
+      { name: 'AV탑걸', url: 'https://kr45.topgirl.co/' },
+      { name: 'STRIPCHAT', url: 'https://ko.stripchat.com/' },
+      { name: 'EPORNER', url: 'https://www.eporner.com/' },
     ],
   },
   {
@@ -56,7 +68,7 @@ export const categories: Category[] = [
       { name: '블랙티비', url: 'https://blacktv22.com/' },
       { name: '코난티비', url: 'https://conan-tv.com/' },
       { name: '킹콩티비', url: 'https://ifadetv.com/' },
-      { name: '네네티비', url: 'https://nntv01.com/' },
+      { name: '로얄티비', url: 'https://rytv01.com/' },
       { name: '마징가티비', url: 'https://litfusegroup.com/' },
     ],
   },
@@ -87,23 +99,13 @@ export const categories: Category[] = [
   {
     id: 'toto-panel', title: '토토/카지노', sub: '베팅 사이트', icon: '🎰',
     items: [
+      { name: 'FOMO', url: 'https://kr.fomo.io' },
+      { name: '플러쉬', url: 'https://flush.com/' },
       { name: '피나클', url: 'https://pinnacle.com/ko/' },
       { name: '비씨게임', url: 'https://bc.game/ko' },
       { name: 'STAKE', url: 'https://stake.com/ko' },
       { name: '다파벳', url: 'https://m.playclubkr.com/kr' },
       { name: '1WIN', url: 'https://1win-korea.co.kr/' },
-    ],
-  },
-  {
-    id: 'foreign-panel', title: '해외성인', sub: '해외 성인 사이트', icon: '🌐',
-    items: [
-      { name: 'Pornhub', url: 'https://fr.pornhub.org/' },
-      { name: 'Spankbang', url: 'https://spankbang.party/' },
-      { name: 'XHAMSTER', url: 'https://xhtotal.com/' },
-      { name: 'XVIDEO', url: 'https://xvideos-k7.com/' },
-      { name: 'AV탑걸', url: 'https://kr45.topgirl.co/' },
-      { name: 'STRIPCHAT', url: 'https://ko.stripchat.com/' },
-      { name: 'EPORNER', url: 'https://www.eporner.com/' },
     ],
   },
   {
@@ -128,55 +130,6 @@ export const categories: Category[] = [
       { name: '4KHD', url: 'https://hett.uuss.uk/' },
       { name: 'TAOTU', url: 'https://ko.taotu.org/' },
       { name: 'MISSKON', url: 'https://misskon.com/' },
-
-    ],
-  },
-  {
-    id: 'bj-panel', title: 'BJ', sub: 'BJ 방송 플랫폼', icon: '🎙',
-    items: [
-      { name: '팬더티비', url: 'https://www.pandalive.co.kr/' },
-      { name: '팝콘티비', url: 'https://www.popkontv.com/' },
-      { name: '플렉스티비', url: 'https://www.flextv.co.kr/' },
-      { name: '톡19티비', url: 'https://www.talk19tv.com/' },
-      { name: '씨나인', url: 'https://www.cnine.kr/' },
-      { name: '아프리카티비', url: 'https://www.sooplive.com/' },
-      { name: '달라', url: 'https://www.dallalive.com/' },
-    ],
-  },
-  {
-    id: 'community-panel', title: '커뮤니티', sub: '인기 커뮤니티', icon: '💬',
-    items: [
-      { name: '인벤', url: 'https://www.inven.co.kr/' },
-      { name: '일간베스트', url: 'https://www.ilbe.com/' },
-      { name: '웃대', url: 'https://m.humoruniv.com/' },
-      { name: '디시인사이드 갤러리', url: 'https://gall.dcinside.com/' },
-      { name: '더쿠', url: 'https://theqoo.net/' },
-      { name: '보배드림', url: 'https://www.bobaedream.co.kr/' },
-      { name: '에펨코리아', url: 'https://www.fmkorea.com/' },
-    ],
-  },
-  {
-    id: 'job-panel', title: '구인구직', sub: '취업/알바 사이트', icon: '💼',
-    items: [
-      { name: '잡코리아', url: 'https://www.jobkorea.co.kr/' },
-      { name: '이공모야', url: 'https://egongmoya.letuin.com/' },
-      { name: '사람인', url: 'https://www.saramin.co.kr/' },
-      { name: '알바천국', url: 'https://www.alba.co.kr/' },
-      { name: '알바몬', url: 'https://www.albamon.com/' },
-      { name: '백조알바', url: 'https://100joalba.co.kr/' },
-      { name: '여우알바', url: 'https://www.foxalba.com/' },
-    ],
-  },
-  {
-    id: 'koreans-panel', title: '한인교민', sub: '해외 한인 커뮤니티', icon: '🇰🇷',
-    items: [
-      { name: '[미국]뉴욕코리아', url: 'https://www.newyorkkorea.net/main/index.html' },
-      { name: '[독일]구텐탁코리아', url: 'https://gutentagkorea.com/' },
-      { name: '[영국]영국사랑', url: 'https://www.04uk.com/' },
-      { name: '[뉴질랜드]코리아포스트', url: 'https://www.nzkoreapost.com/' },
-      { name: '[중국]모이자', url: 'https://www.moyiza.com/' },
-      { name: '[네덜란드]데일리NL', url: 'https://dailynl.net/' },
-      { name: '[필리핀]필리핀올', url: 'http://www.philall.com/' },
     ],
   },
 ];
