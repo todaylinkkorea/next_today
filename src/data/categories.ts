@@ -33,7 +33,7 @@ export const categories: Category[] = [
       { name: '밍키넷', url: 'https://mingky07.tv/' },
       { name: '야동파티', url: 'https://ydparty06.tv/' },
       { name: '야동위키', url: 'https://19wiki6.com/' },
-      { name: '딸플릭스', url: 'https://kr17.ddal.xyz/' },
+      { name: '딸플릭스', url: 'https://kr18.ddal.xyz/' },
     ],
   },
   {
@@ -51,13 +51,13 @@ export const categories: Category[] = [
   {
     id: 'webtoon-panel', title: '웹툰', sub: '웹툰 플랫폼', icon: '📚',
     items: [
-      { name: '늑대닷컴', url: 'https://wfwf439.com/' },
+      { name: '늑대닷컴', url: 'https://wfwf480.com/' },
       { name: '뉴토끼', url: 'https://sbxh9.com/' },
       { name: '짭토끼', url: 'https://toki31.com/' },
-      { name: '펀비', url: 'https://funbe665.com/' },
-      { name: '툰코', url: 'https://tkor143.com/' },
-      { name: '블랙툰', url: 'https://blacktoon418.com/' },
-      { name: '야툰', url: 'https://yatoon245.asia/' },
+      { name: '펀비', url: 'https://funbe667.com/' },
+      { name: '툰코', url: 'https://tkor145.com/' },
+      { name: '블랙툰', url: 'https://blacktoon419.com/' },
+      { name: '야툰', url: 'https://yatoon246.asia/' },
     ],
   },
   {
