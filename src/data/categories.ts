@@ -16,7 +16,7 @@ export const categories: Category[] = [
     id: 'movie-panel', title: '영화/드라마', sub: '영상 콘텐츠 사이트', icon: '🎬',
     items: [
       { name: '티비위키', url: 'https://tvwiki.store/' },
-      { name: '티비룸', url: 'https://tvroom27.org/' },
+      { name: '티비룸', url: 'https://tvroom29.org/' },
       { name: '티비몬', url: 'https://tvmon1.com/' },
       { name: '티비팡', url: 'https://tvpang.live/' },
       { name: '바다티비', url: 'https://bada34.kr/' },
@@ -28,11 +28,11 @@ export const categories: Category[] = [
     id: 'adult-panel', title: '성인', sub: '성인 콘텐츠 사이트', icon: '🔞',
     items: [
       { name: '야스닷컴', url: 'https://yasyadong02.tv/' },
+      { name: '야동코리아', url: 'https://yadongkorea02.tv/' },
       { name: 'AV19', url: 'https://av19t.com/' },
       { name: '다크걸', url: 'https://darkgirl17.com/' },
       { name: '밍키넷', url: 'https://mingky07.tv/' },
       { name: '야동파티', url: 'https://ydparty06.tv/' },
-      { name: '야동위키', url: 'https://19wiki6.com/' },
       { name: '딸플릭스', url: 'https://kr18.ddal.xyz/' },
     ],
   },
@@ -51,12 +51,12 @@ export const categories: Category[] = [
   {
     id: 'webtoon-panel', title: '웹툰', sub: '웹툰 플랫폼', icon: '📚',
     items: [
-      { name: '늑대닷컴', url: 'https://wfwf480.com/' },
+      { name: '늑대닷컴', url: 'https://wfwf483.com/' },
       { name: '뉴토끼', url: 'https://sbxh9.com/' },
       { name: '짭토끼', url: 'https://toki31.com/' },
       { name: '펀비', url: 'https://funbe667.com/' },
-      { name: '툰코', url: 'https://tkor145.com/' },
-      { name: '블랙툰', url: 'https://blacktoon419.com/' },
+      { name: '툰코', url: 'https://tkor146.com/' },
+      { name: '블랙툰', url: 'https://blacktoon420.com/' },
       { name: '야툰', url: 'https://yatoon246.asia/' },
     ],
   },
@@ -75,13 +75,13 @@ export const categories: Category[] = [
   {
     id: 'opi-panel', title: '오피/유흥', sub: '유흥 정보 사이트', icon: '🏮',
     items: [
-      { name: '오피가이드', url: 'https://opga040.com/' },
-      { name: '오피매니아', url: 'https://opmm05.com/' },
-      { name: '오피스타', url: 'https://opmart21.com/' },
+      { name: '오피가이드', url: 'https://opga041.com/' },
+      { name: '오피매니아', url: 'https://opmm06.com/' },
+      { name: '오피스타', url: 'https://opmart22.com/' },
       { name: '섹밤', url: 'https://sexbam57.top/' },
-      { name: '헬로밤', url: 'https://hlbam31.com/' },
-      { name: '밤의민족', url: 'https://newbm36.com/' },
-      { name: '키탐넷', url: 'https://kisstime5.net/' },
+      { name: '헬로밤', url: 'https://hlbam32.com/' },
+      { name: '밤의민족', url: 'https://newbm37.com/' },
+      { name: '키탐넷', url: 'https://kisstime6.net/' },
     ],
   },
   {
