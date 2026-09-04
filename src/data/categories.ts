@@ -16,9 +16,9 @@ export const categories: Category[] = [
     id: 'movie-panel', title: '영화/드라마', sub: '영상 콘텐츠 사이트', icon: '🎬',
     items: [
       { name: '티비위키', url: 'https://tvwiki.store/' },
-      { name: '티비룸', url: 'https://tvroom30.org/' },
+      { name: '티비룸', url: 'https://tvroom31.org/' },
       { name: '티비몬', url: 'https://tvmon1.com/' },
-      { name: '후후티비', url: 'https://oo.hoohootv451.xyz/' },
+      { name: '후후티비', url: 'https://oo.hoohootv453.xyz/' },
       { name: '미미티비', url: 'https://mimitv3.com/' },
       { name: '무비킹', url: 'https://mvking17.org/' },
       { name: '애니24', url: 'https://ani.ohli24.com/' },
@@ -52,25 +52,25 @@ export const categories: Category[] = [
   {
     id: 'webtoon-panel', title: '웹툰', sub: '웹툰 플랫폼', icon: '📚',
     items: [
-      { name: '늑대닷컴', url: 'https://wfwf487.com/' },
+      { name: '늑대닷컴', url: 'https://wfwf491.com/' },
       { name: '뉴토끼', url: 'https://sbxh9.com/' },
       { name: '짭토끼', url: 'https://toki31.com/' },
-      { name: '펀비', url: 'https://funbe670.com/' },
-      { name: '툰코', url: 'https://tkor147.com/' },
+      { name: '펀비', url: 'https://funbe671.com/' },
+      { name: '툰코', url: 'https://tkor149.com/' },
       { name: '블랙툰', url: 'https://blacktoon421.com/' },
-      { name: '야툰', url: 'https://yatoon247.asia/' },
+      { name: '야툰', url: 'https://yatoon248.asia/' },
     ],
   },
   {
     id: 'sports-panel', title: '스포츠중계', sub: '실시간 스포츠 중계', icon: '⚽',
     items: [
-      { name: '빠른티비', url: 'https://quick-tv.com/' },
+      { name: '닌자티비', url: 'https://njtv-01.com/' },
       { name: '헐크티비', url: 'https://www.hulk24.com/' },
       { name: '블랙티비', url: 'https://blacktv22.com/' },
-      { name: '코난티비', url: 'https://conan-tv.com/' },
       { name: '킹콩티비', url: 'https://ifadetv.com/' },
       { name: '로얄티비', url: 'https://rytv01.com/' },
       { name: '마징가티비', url: 'https://litfusegroup.com/' },
+      { name: '배트맨티비', url: 'https://bmtv24.com/sportstv/' },
     ],
   },
   {
