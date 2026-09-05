@@ -1,6 +1,7 @@
 import type { Metadata } from 'next';
 import Image from 'next/image';
 import SearchForm from '@/components/hero/SearchForm';
+import BannerGrid from '@/components/banners/BannerGrid';
 import RankSection from '@/components/categories/RankSection';
 
 export const metadata: Metadata = {
@@ -78,6 +79,9 @@ export default function Home() {
           ))}
         </div>
       </section>
+
+      {/* Recommended Top Banner Grid */}
+      <BannerGrid />
 
       {/* Render Server-Side RankSection which utilizes client-side JumpBar */}
       <RankSection />

@@ -631,134 +631,53 @@ button { cursor: pointer; font-family: inherit; }
   font-size: 14px;
 }
 
-/* ─── Banner Grid ─────────────────────────────────── */
-.banner-grid {
+/* ─── Banner Grid (Top Recommended Banners) ───────── */
+.top-banner-grid {
   display: grid;
-  grid-template-columns: repeat(3, 1fr);
+  grid-template-columns: repeat(2, 1fr);
   gap: 16px;
 }
 
-.banner-item {
+.top-banner-card {
   display: block;
-  border-radius: var(--radius-3xl);
+  background: var(--color-surface);
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius-2xl);
   overflow: hidden;
-  padding: 22px;
+  box-shadow: var(--shadow-sm);
   transition: var(--transition);
   position: relative;
+  text-decoration: none;
 }
 
-.banner-item:hover {
-  transform: translateY(-3px);
+.top-banner-card:hover {
+  transform: translateY(-2px);
+  box-shadow: var(--shadow-md);
+  border-color: var(--color-border-hover);
 }
 
-.banner-item--lg {
-  min-height: 150px;
+.top-banner-media {
+  position: relative;
+  width: 100%;
+  aspect-ratio: 6 / 1;
+  background: #f8fafc;
+  overflow: hidden;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 
-.banner-item--md {
-  min-height: 118px;
-  border-radius: var(--radius-2xl);
-  padding: 20px;
+.top-banner-img {
+  width: 100%;
+  height: 100%;
+  object-fit: fill;
+  display: block;
+  transition: transform 0.25s ease;
 }
 
-.banner-item--sm {
-  min-height: 96px;
-  border-radius: var(--radius-xl);
-  padding: 18px;
+.top-banner-card:hover .top-banner-img {
+  transform: scale(1.015);
 }
-
-.banner-label {
-  font-size: 12px;
-  font-weight: 700;
-}
-
-.banner-title {
-  font-weight: 800;
-  margin-top: 10px;
-  line-height: 1.2;
-  letter-spacing: -0.03em;
-}
-
-.banner-item--lg .banner-title { font-size: 28px; }
-.banner-item--md .banner-title { font-size: 22px; line-height: 1.25; }
-.banner-item--sm .banner-title { font-size: 20px; margin-top: 8px; }
-
-.banner-desc {
-  font-size: 14px;
-  margin-top: 12px;
-  line-height: 1.6;
-}
-
-.banner-item--md .banner-desc { font-size: 13px; margin-top: 10px; }
-
-/* Banner color variants */
-.banner-pink-1 {
-  border: 1px solid #f3c6d5;
-  background: linear-gradient(135deg, #fff7fb, #ffe3ef);
-  color: #7a284d;
-  box-shadow: 0 12px 24px rgba(244,114,182,.12);
-}
-
-.banner-pink-2 {
-  border: 1px solid #f6cade;
-  background: linear-gradient(135deg, #ffffff, #ffeaf3);
-  color: #7a284d;
-  box-shadow: 0 12px 24px rgba(236,72,153,.10);
-}
-
-.banner-pink-3 {
-  border: 1px solid #f4c7d7;
-  background: linear-gradient(135deg, #fff9fc, #ffd9e9);
-  color: #7a284d;
-  box-shadow: 0 12px 24px rgba(244,114,182,.11);
-}
-
-.banner-pink-md-1 {
-  border: 1px solid #f3cade;
-  background: #fff7fb;
-  color: #7a284d;
-  box-shadow: 0 10px 20px rgba(236,72,153,.08);
-}
-
-.banner-pink-md-2 {
-  border: 1px solid #f5d0e0;
-  background: #fff8fc;
-  color: #7a284d;
-  box-shadow: 0 10px 20px rgba(244,114,182,.07);
-}
-
-.banner-pink-md-3 {
-  border: 1px solid #f6d5e3;
-  background: #fffafd;
-  color: #7a284d;
-  box-shadow: 0 10px 20px rgba(244,114,182,.07);
-}
-
-.banner-pink-sm-1 {
-  border: 1px solid #f3cade;
-  background: #ffffff;
-  color: #7a284d;
-  box-shadow: 0 8px 18px rgba(236,72,153,.06);
-}
-
-.banner-pink-sm-2 {
-  border: 1px solid #f5d2e1;
-  background: #fff9fc;
-  color: #7a284d;
-  box-shadow: 0 8px 18px rgba(244,114,182,.06);
-}
-
-.banner-pink-sm-3 {
-  border: 1px solid #f4cfe0;
-  background: #fff7fb;
-  color: #7a284d;
-  box-shadow: 0 8px 18px rgba(236,72,153,.06);
-}
-
-.banner-label-pink-1 { color: #d14d87; }
-.banner-label-pink-2 { color: #db4d8d; }
-.banner-label-pink-3 { color: #d94684; }
-.banner-desc-pink { color: #9d456c; }
 
 /* ─── Category Grid ───────────────────────────────── */
 .category-grid {
@@ -1197,7 +1116,7 @@ button { cursor: pointer; font-family: inherit; }
 
   .rank-grid { grid-template-columns: repeat(3, 1fr); }
 
-  .banner-grid-9 { grid-template-columns: repeat(2, 1fr); }
+  .top-banner-grid { grid-template-columns: repeat(2, 1fr); }
 
   .service-info-grid { grid-template-columns: repeat(2, 1fr); }
 }
@@ -1253,8 +1172,13 @@ button { cursor: pointer; font-family: inherit; }
   }
 
   .cards,
-  .banner-grid,
-  .banner-grid-9 { grid-template-columns: 1fr; }
+  .top-banner-grid { 
+    grid-template-columns: 1fr; 
+    gap: 12px;
+  }
+  .top-banner-card {
+    border-radius: var(--radius-xl);
+  }
 
   .rank-grid { grid-template-columns: repeat(2, 1fr); }
 
