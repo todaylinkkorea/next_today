@@ -72,7 +72,7 @@ export default function RootLayout({
                   'url': 'https://xn--wh1bv9k05k4kk.com',
                   'logo': 'https://xn--wh1bv9k05k4kk.com/images/logo.png',
                   'sameAs': [
-                    'https://t.me/todaylink'
+                    'https://t.me/famas09'
                   ]
                 }
               ]

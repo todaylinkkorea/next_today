@@ -9,7 +9,7 @@ export default function BannerGrid() {
           <div className="muted">주요 제휴 보증업체</div>
           <h2>추천 보증 배너</h2>
         </div>
-        <div className="muted">엄격한 검증을 통과한 공식 안전 보증 사이트 안내</div>
+        <div className="muted">엄격한 검증을 통과한 메이저 놀이터 안내</div>
       </div>
 
       <div className="top-banner-grid">

@@ -14,16 +14,16 @@ export default function Header() {
       const days = ['일요일', '월요일', '화요일', '수요일', '목요일', '금요일', '토요일'];
       const dayIdx = new Date(now.toLocaleString('en-US', opts)).getDay();
       const day = days[dayIdx];
-      
+
       const y = now.toLocaleString('en', { ...opts, year: 'numeric' });
       const m = now.toLocaleString('en', { ...opts, month: 'numeric' });
       const d = now.toLocaleString('en', { ...opts, day: 'numeric' });
-      
+
       const timePart = now.toLocaleString('en-GB', {
         timeZone: 'Asia/Seoul',
         hour: '2-digit', minute: '2-digit', second: '2-digit', hour12: false
       });
-      
+
       setTimeStr({
         date: `${y}년 ${m}월 ${d}일 ${day}`,
         time: timePart
@@ -38,7 +38,7 @@ export default function Header() {
     <header className="topbar" role="banner">
       <div className="topbar-inner">
         <div className="topbar-left">
-          <a href="https://t.me/todaylink" className="topbar-telegram" target="_blank" rel="noopener noreferrer" aria-label="텔레그램 문의">
+          <a href="https://t.me/famas09" className="topbar-telegram" target="_blank" rel="noopener noreferrer" aria-label="텔레그램 문의">
             <Image src="/images/telegram.svg" alt="텔레그램 로고" width={14} height={14} />
             텔레그램 문의
           </a>
