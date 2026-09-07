@@ -6,8 +6,8 @@ export default function BannerGrid() {
     <section className="section" id="banners" aria-label="추천 보증 배너">
       <div className="section-head">
         <div>
-          <div className="muted">주요 제휴 보증업체</div>
-          <h2>추천 보증 배너</h2>
+          <div className="muted">추천 메이저 업체</div>
+          <h2>추천 메이저 배너</h2>
         </div>
         <div className="muted">엄격한 검증을 통과한 메이저 놀이터 안내</div>
       </div>
