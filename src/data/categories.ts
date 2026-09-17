@@ -32,7 +32,7 @@ export const categories: Category[] = [
       { name: '야동코리아', url: 'https://yako46.com/' },
       { name: '다크걸', url: 'https://darkg18.com/' },
       { name: '섹플릭스', url: 'https://sexflix25.com/' },
-      { name: '야동위키', url: 'https://www.19wiki8.com/' },
+      { name: '왕부랄', url: 'https://wangtv14.com/' },
       { name: '조개모아', url: 'https://jogemoa3.com/' },
     ],
   },
@@ -64,7 +64,7 @@ export const categories: Category[] = [
     id: 'sports-panel', title: '스포츠중계', sub: '실시간 스포츠 중계', icon: '⚽',
     items: [
       { name: '헐크티비', url: 'https://www.hulk24.com/' },
-      { name: '킹콩티비', url: 'https://kingkongtvlive.com/' },
+      { name: '빠른티비', url: 'https://quicksportstv.com/' },
       { name: '닌자티비', url: 'https://njtv-01.com/' },
       { name: '털보티비', url: 'https://tulbo.tv/' },
       { name: '블랙티비', url: 'https://blacktv22.com/' },
@@ -77,7 +77,7 @@ export const categories: Category[] = [
     items: [
       { name: '오피가이드', url: 'https://opga041.com/' },
       { name: '오피매니아', url: 'https://opmm07.com/' },
-      { name: '오피스타', url: 'https://opmart23.com/' },
+      { name: '오피스타', url: 'https://opmart24 .com/' },
       { name: '오피나라', url: 'https://opnara11.com/' },
       { name: '오피뷰', url: 'https://opview85.com/' },
       { name: '외로운밤', url: 'https://lybam7.com/' },
