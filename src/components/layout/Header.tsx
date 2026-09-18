@@ -38,7 +38,7 @@ export default function Header() {
     <header className="topbar" role="banner">
       <div className="topbar-inner">
         <div className="topbar-left">
-          <a href="https://t.me/famas09" className="topbar-telegram" target="_blank" rel="noopener noreferrer" aria-label="텔레그램 문의">
+          <a href="https://t.me/tdlnow" className="topbar-telegram" target="_blank" rel="noopener noreferrer" aria-label="텔레그램 문의">
             <Image src="/images/telegram.svg" alt="텔레그램 로고" width={14} height={14} />
             텔레그램 문의
           </a>
