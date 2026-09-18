@@ -15,25 +15,25 @@ export const categories: Category[] = [
   {
     id: 'movie-panel', title: '영화/드라마', sub: '영상 콘텐츠 사이트', icon: '🎬',
     items: [
-      { name: '티비위키', url: 'https://tvwiki49.net/' },
-      { name: '누누티비', url: 'https://nooo32.tv/' },
-      { name: '미미티비', url: 'https://mimitv4.com/' },
+      { name: '티비위키', url: 'https://tvwiki50.net/' },
+      { name: '누누티비', url: 'https://nooo33.tv/' },
+      { name: '미미티비', url: 'https://mimitv5.com/' },
       { name: '온도티비', url: 'https://20.ondotv.com/' },
       { name: '티비룸', url: 'https://tvroom33.org/' },
       { name: '티비몬', url: 'https://tvmon1.com/' },
-      { name: '바다티비', url: 'https://bada52.com/' },
+      { name: '바다티비', url: 'https://bada54.com/' },
     ],
   },
   {
     id: 'adult-panel', title: '성인', sub: '성인 콘텐츠 사이트', icon: '🔞',
     items: [
       { name: '야스닷컴', url: 'https://yasyadong02.tv/' },
-      { name: '야동투어', url: 'https://ydtour70.sbs/' },
       { name: '야동코리아', url: 'https://yako46.com/' },
       { name: '다크걸', url: 'https://darkg18.com/' },
+      { name: '야동투어', url: 'https://ydtour71.sbs/' },
       { name: '섹플릭스', url: 'https://sexflix25.com/' },
       { name: '왕부랄', url: 'https://wangtv14.com/' },
-      { name: '조개모아', url: 'https://jogemoa3.com/' },
+      { name: '조개모아', url: 'https://jogemoa4.com/' },
     ],
   },
   {
@@ -52,7 +52,7 @@ export const categories: Category[] = [
     id: 'webtoon-panel', title: '웹툰', sub: '웹툰 플랫폼', icon: '📚',
     items: [
       { name: '뉴토끼', url: 'https://toki31.com/' },
-      { name: '늑대닷컴', url: 'https://wfwf498.com/' },
+      { name: '늑대닷컴', url: 'https://wfwf499.com/' },
       { name: '툰코', url: 'https://tkor153.com/' },
       { name: '야툰', url: 'https://yatoon251.asia/' },
       { name: '펀비', url: 'https://funbe675.com/' },
@@ -64,12 +64,12 @@ export const categories: Category[] = [
     id: 'sports-panel', title: '스포츠중계', sub: '실시간 스포츠 중계', icon: '⚽',
     items: [
       { name: '헐크티비', url: 'https://www.hulk24.com/' },
-      { name: '빠른티비', url: 'https://quicksportstv.com/' },
-      { name: '닌자티비', url: 'https://njtv-01.com/' },
+      { name: '네오티비', url: 'https://neotv24.com/' },
+      { name: '건담티비', url: 'https://gdtv24.com/' },
       { name: '털보티비', url: 'https://tulbo.tv/' },
       { name: '블랙티비', url: 'https://blacktv22.com/' },
-      { name: '네오티비', url: 'https://neotv24.com/' },
       { name: '콜라티비', url: 'https://colatv01.com/' },
+      { name: '365티비', url: 'https://365-tv.com/' },
     ],
   },
   {
@@ -77,7 +77,7 @@ export const categories: Category[] = [
     items: [
       { name: '오피가이드', url: 'https://opga041.com/' },
       { name: '오피매니아', url: 'https://opmm07.com/' },
-      { name: '오피스타', url: 'https://opmart24 .com/' },
+      { name: '오피스타', url: 'https://opmart24.com/' },
       { name: '오피나라', url: 'https://opnara11.com/' },
       { name: '오피뷰', url: 'https://opview85.com/' },
       { name: '외로운밤', url: 'https://lybam7.com/' },
