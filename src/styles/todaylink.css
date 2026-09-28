@@ -3,7 +3,6 @@
  * 클래스명은 컴포넌트가 직접 참조하므로 변경 금지
  * 토큰 값은 :root 에서만 수정
  */
-@import url("https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.9/dist/web/static/pretendard.min.css");
 
     :root {
       /* z-index scale (unchanged from original) */
@@ -1457,5 +1456,5 @@
      .stretched-card { position: relative; }
      .stretched-link::after { content: ''; position: absolute; inset: 0; }
      .stretched-card .ping-status-badge { position: relative; z-index: 1; }
-     .stretched-link { color: inherit; text-decoration: none; }
+     .stretched-link { text-decoration: none; }
      .stretched-card:has(.stretched-link:focus-visible) { outline: 2px solid var(--primary-blue); outline-offset: 2px; }
