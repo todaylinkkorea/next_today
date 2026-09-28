@@ -30,15 +30,34 @@ test('rejects unknown status', () => {
   assert.throws(() => parseLinkData({ categories: [{ slug: 'a', name: 'A', icon: 'A', items: [{ name: 'one', url: 'https://one.test', status: 'offline' }] }] }), /categories\[0\]\.items\[0\]\.status/);
 });
 
+test('rejects duplicate url within a category (trailing slash ignored)', () => {
+  assert.throws(() => parseLinkData({ categories: [{ slug: 'a', name: 'A', icon: 'A', items: [{ name: 'one', url: 'https://a.test' }, { name: 'two', url: 'https://a.test/' }] }] }), /categories\[0\]\.items\[1\]\.url/);
+});
+
+test('rejects whitespace inside url', () => {
+  for (const url of ['https://one.test/\npath', 'https://one .test']) {
+    assert.throws(() => parseLinkData({ categories: [{ slug: 'a', name: 'A', icon: 'A', items: [{ name: 'one', url }] }] }), /categories\[0\]\.items\[0\]\.url/);
+  }
+});
+
+test('allows same url in different categories', () => {
+  assert.doesNotThrow(() => parseLinkData({ categories: [{ slug: 'a', name: 'A', icon: 'A', items: [{ name: 'one', url: 'https://same.test' }] }, { slug: 'b', name: 'B', icon: 'B', items: [{ name: 'two', url: 'https://same.test' }] }] }));
+});
+
 test('accepts real categories.json (10 categories, 70 items)', () => {
   const categories = parseLinkData(raw);
   assert.equal(categories.length, 10);
   assert.equal(categories.reduce((total, category) => total + category.items.length, 0), 70);
 });
 
-test('categorySlugs matches json', () => {
-  const categories = parseLinkData(raw);
-  assert.deepEqual(categorySlugs(categories), categories.map(({ slug }) => slug));
+test('categorySlugs returns slugs in order', () => {
+  const categories = parseLinkData({ categories: [{ slug: 'b-cat', name: 'B', icon: 'B', items: [{ name: 'one', url: 'https://one.test' }] }, { slug: 'a-cat', name: 'A', icon: 'A', items: [{ name: 'two', url: 'https://two.test' }] }] });
+  assert.deepEqual(categorySlugs(categories), ['b-cat', 'a-cat']);
+});
+
+// slug 는 /category/<slug> 공개 URL 이다. 바꾸면 기존 URL 이 404 가 된다 — 의도한 변경이면 이 목록도 함께 고칠 것.
+test('real categories.json keeps published slugs', () => {
+  assert.deepEqual(categorySlugs(parseLinkData(raw)), ['movie', 'adult', 'foreign', 'webtoon', 'sports', 'opi', 'verify', 'toto', 'goods', 'photo']);
 });
 
 test('searchSites filters by name and category, caps at 20', () => {

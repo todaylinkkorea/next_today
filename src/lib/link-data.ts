@@ -67,6 +67,7 @@ function parseCategory(value: unknown, index: number, slugs: Set<string>): LinkC
     const itemName = stringValue(item.name, `${itemPath}.name`, '문자열이 아닙니다');
     if (!itemName) fail(`${itemPath}.name`, '비어 있을 수 없습니다');
     const url = stringValue(item.url, `${itemPath}.url`, '문자열이 아닙니다');
+    if (/\s/.test(url)) fail(`${itemPath}.url`, 'URL 안에 공백이나 줄바꿈이 있습니다');
     let parsedUrl: URL;
     try {
       parsedUrl = new URL(url);
