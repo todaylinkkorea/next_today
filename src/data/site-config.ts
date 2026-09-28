@@ -2,7 +2,7 @@ export const LIFETIME_DOMAIN = '오늘링크.com';
 export const LIFETIME_URL = 'https://오늘링크.com';
 export const TELEGRAM_URL = 'https://t.me/tdlnow';
 export const FEATURED_SLUGS = ['movie', 'adult', 'toto', 'webtoon'] as const;
-export const RANK_LIMIT = 10;
+export const RANK_LIMIT = 7;
 
 export type SearchEngineId =
   | 'google'

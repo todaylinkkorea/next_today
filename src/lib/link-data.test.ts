@@ -9,39 +9,57 @@ import {
   searchSites,
 } from './link-data.ts';
 
+function items7(first: Record<string, unknown> = {}) {
+  return Array.from({ length: 7 }, (_, index) => ({
+    name: `site ${index}`,
+    url: `https://site-${index}.test`,
+    ... (index === 0 ? first : {}),
+  }));
+}
+
 test('rejects duplicate slug', () => {
-  assert.throws(() => parseLinkData({ categories: [{ slug: 'a', name: 'A', icon: 'A', items: [{ name: 'one', url: 'https://one.test' }] }, { slug: 'a', name: 'B', icon: 'B', items: [{ name: 'two', url: 'https://two.test' }] }] }), /categories\[1\]\.slug/);
+  assert.throws(() => parseLinkData({ categories: [{ slug: 'a', name: 'A', icon: 'A', items: items7() }, { slug: 'a', name: 'B', icon: 'B', items: items7() }] }), /categories\[1\]\.slug/);
 });
 
 test('rejects javascript: url', () => {
-  assert.throws(() => parseLinkData({ categories: [{ slug: 'a', name: 'A', icon: 'A', items: [{ name: 'one', url: 'javascript:alert(1)' }] }] }), /categories\[0\]\.items\[0\]\.url/);
+  assert.throws(() => parseLinkData({ categories: [{ slug: 'a', name: 'A', icon: 'A', items: items7({ url: 'javascript:alert(1)' }) }] }), /categories\[0\]\.items\[0\]\.url/);
 });
 
-test('rejects 11 items', () => {
-  const items = Array.from({ length: 11 }, (_, index) => ({ name: `site ${index}`, url: `https://site-${index}.test` }));
+test('rejects 8 items', () => {
+  const items = Array.from({ length: 8 }, (_, index) => ({ name: `site ${index}`, url: `https://site-${index}.test` }));
   assert.throws(() => parseLinkData({ categories: [{ slug: 'a', name: 'A', icon: 'A', items }] }), /categories\[0\]\.items/);
 });
 
+test('rejects 6 items', () => {
+  assert.throws(() => parseLinkData({ categories: [{ slug: 'a', name: 'A', icon: 'A', items: items7().slice(0, 6) }] }), /categories\[0\]\.items/);
+});
+
+test('accepts exactly 7 items', () => {
+  assert.doesNotThrow(() => parseLinkData({ categories: [{ slug: 'a', name: 'A', icon: 'A', items: items7() }] }));
+});
+
 test('rejects empty name', () => {
-  assert.throws(() => parseLinkData({ categories: [{ slug: 'a', name: '   ', icon: 'A', items: [{ name: 'one', url: 'https://one.test' }] }] }), /categories\[0\]\.name/);
+  assert.throws(() => parseLinkData({ categories: [{ slug: 'a', name: '   ', icon: 'A', items: items7() }] }), /categories\[0\]\.name/);
 });
 
 test('rejects unknown status', () => {
-  assert.throws(() => parseLinkData({ categories: [{ slug: 'a', name: 'A', icon: 'A', items: [{ name: 'one', url: 'https://one.test', status: 'offline' }] }] }), /categories\[0\]\.items\[0\]\.status/);
+  assert.throws(() => parseLinkData({ categories: [{ slug: 'a', name: 'A', icon: 'A', items: items7({ status: 'offline' }) }] }), /categories\[0\]\.items\[0\]\.status/);
 });
 
 test('rejects duplicate url within a category (trailing slash ignored)', () => {
-  assert.throws(() => parseLinkData({ categories: [{ slug: 'a', name: 'A', icon: 'A', items: [{ name: 'one', url: 'https://a.test' }, { name: 'two', url: 'https://a.test/' }] }] }), /categories\[0\]\.items\[1\]\.url/);
+  const items = items7({ url: 'https://a.test' });
+  items[1] = { ...items[1], url: 'https://a.test/' };
+  assert.throws(() => parseLinkData({ categories: [{ slug: 'a', name: 'A', icon: 'A', items }] }), /categories\[0\]\.items\[1\]\.url/);
 });
 
 test('rejects whitespace inside url', () => {
   for (const url of ['https://one.test/\npath', 'https://one .test']) {
-    assert.throws(() => parseLinkData({ categories: [{ slug: 'a', name: 'A', icon: 'A', items: [{ name: 'one', url }] }] }), /categories\[0\]\.items\[0\]\.url/);
+    assert.throws(() => parseLinkData({ categories: [{ slug: 'a', name: 'A', icon: 'A', items: items7({ url }) }] }), /categories\[0\]\.items\[0\]\.url/);
   }
 });
 
 test('allows same url in different categories', () => {
-  assert.doesNotThrow(() => parseLinkData({ categories: [{ slug: 'a', name: 'A', icon: 'A', items: [{ name: 'one', url: 'https://same.test' }] }, { slug: 'b', name: 'B', icon: 'B', items: [{ name: 'two', url: 'https://same.test' }] }] }));
+  assert.doesNotThrow(() => parseLinkData({ categories: [{ slug: 'a', name: 'A', icon: 'A', items: items7({ url: 'https://same.test' }) }, { slug: 'b', name: 'B', icon: 'B', items: items7({ url: 'https://same.test' }) }] }));
 });
 
 test('accepts real categories.json (10 categories, 70 items)', () => {
@@ -51,7 +69,7 @@ test('accepts real categories.json (10 categories, 70 items)', () => {
 });
 
 test('categorySlugs returns slugs in order', () => {
-  const categories = parseLinkData({ categories: [{ slug: 'b-cat', name: 'B', icon: 'B', items: [{ name: 'one', url: 'https://one.test' }] }, { slug: 'a-cat', name: 'A', icon: 'A', items: [{ name: 'two', url: 'https://two.test' }] }] });
+  const categories = parseLinkData({ categories: [{ slug: 'b-cat', name: 'B', icon: 'B', items: items7() }, { slug: 'a-cat', name: 'A', icon: 'A', items: items7() }] });
   assert.deepEqual(categorySlugs(categories), ['b-cat', 'a-cat']);
 });
 
@@ -61,7 +79,7 @@ test('real categories.json keeps published slugs', () => {
 });
 
 test('searchSites filters by name and category, caps at 20', () => {
-  const categories = parseLinkData({ categories: ['a', 'b', 'c'].map((slug, categoryIndex) => ({ slug: `movies-${slug}`, name: 'Movie Sites', icon: 'M', items: Array.from({ length: categoryIndex === 2 ? 5 : 10 }, (_, index) => ({ name: `Site ${categoryIndex * 10 + index}`, url: `https://site-${categoryIndex * 10 + index}.test` })) })) });
+  const categories = parseLinkData({ categories: ['a', 'b', 'c'].map((slug, categoryIndex) => ({ slug: `movies-${slug}`, name: 'Movie Sites', icon: 'M', items: Array.from({ length: 7 }, (_, index) => ({ name: `Site ${categoryIndex * 7 + index}`, url: `https://site-${categoryIndex * 7 + index}.test` })) })) });
   const sites = flattenSites(categories);
   assert.equal(searchSites(sites, 'movie').length, 20);
   assert.equal(searchSites(sites, 'SITE 2')[0]?.name, 'Site 2');

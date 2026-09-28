@@ -1,9 +1,15 @@
 import assert from 'node:assert/strict';
 import test from 'node:test';
+import { ITEMS_PER_CATEGORY } from '../lib/link-data.ts';
 import {
+  RANK_LIMIT,
   SEARCH_ENGINES,
   buildEngineSearchUrl,
 } from './site-config.ts';
+
+test('RANK_LIMIT equals ITEMS_PER_CATEGORY', () => {
+  assert.equal(RANK_LIMIT, ITEMS_PER_CATEGORY);
+});
 
 test('buildEngineSearchUrl encodes query', () => {
   assert.equal(

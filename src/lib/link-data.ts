@@ -21,7 +21,7 @@ export type FlatSite = LinkItem & {
   rank: number;
 };
 
-export const MAX_ITEMS_PER_CATEGORY = 10;
+export const ITEMS_PER_CATEGORY = 7;
 
 type RecordValue = Record<string, unknown>;
 
@@ -56,8 +56,8 @@ function parseCategory(value: unknown, index: number, slugs: Set<string>): LinkC
     : stringValue(value.description, `${path}.description`, '문자열이 아닙니다');
 
   if (!Array.isArray(value.items)) fail(`${path}.items`, '배열이 아닙니다');
-  if (value.items.length < 1 || value.items.length > MAX_ITEMS_PER_CATEGORY) {
-    fail(`${path}.items`, `1~${MAX_ITEMS_PER_CATEGORY}개여야 합니다`);
+  if (value.items.length !== ITEMS_PER_CATEGORY) {
+    fail(`${path}.items`, `${ITEMS_PER_CATEGORY}개여야 합니다`);
   }
 
   const urls = new Set<string>();
