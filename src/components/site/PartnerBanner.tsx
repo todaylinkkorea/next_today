@@ -2,6 +2,8 @@ import Image from 'next/image';
 import { topBanners } from '@/data/banners';
 import { TELEGRAM_URL } from '@/data/site-config';
 
+const PARTNER_GRID_SLOTS = 12;
+
 interface PartnerBannerProps {
   category?: { name: string };
 }
@@ -27,9 +29,12 @@ function InquiryCard() {
 }
 
 function PartnerCards() {
+  const banners = topBanners.slice(0, PARTNER_GRID_SLOTS);
+  const inquiryCardCount = Math.max(0, PARTNER_GRID_SLOTS - topBanners.length);
+
   return (
     <>
-      {topBanners.map((banner) => (
+      {banners.map((banner) => (
         <a
           key={banner.id}
           className="partner-banner-card partner-image-card"
@@ -47,8 +52,7 @@ function PartnerCards() {
           />
         </a>
       ))}
-      <InquiryCard key="inquiry-1" />
-      <InquiryCard key="inquiry-2" />
+      {Array.from({ length: inquiryCardCount }, (_, i) => <InquiryCard key={`inquiry-${i}`} />)}
     </>
   );
 }

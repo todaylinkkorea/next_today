@@ -13,10 +13,6 @@ function NaverIcon() {
   return <svg viewBox="0 0 24 24" style={{ width: 20, height: 20 }} aria-hidden="true"><rect width="24" height="24" rx="4" fill="#03C75A"/><path d="M6.5 6.5H9.8L14.2 13V6.5H17.5V17.5H14.2L9.8 11V17.5H6.5V6.5Z" fill="#FFFFFF"/></svg>;
 }
 
-function XIcon() {
-  return <svg viewBox="0 0 24 24" style={{ width: 18, height: 18, fill: 'currentColor' }} aria-hidden="true"><path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-5.214-6.817L4.99 21.75H1.68l7.73-8.835L1.254 2.25H8.08l4.713 6.231zm-1.161 17.52h1.833L7.084 4.126H5.117z"/></svg>;
-}
-
 function TikTokIcon() {
   return <span className="tiktok-icon-wrapper" aria-hidden="true"><svg viewBox="0 0 24 24" style={{ width: 13, height: 13, fill: '#FFFFFF' }}><path d="M14.5 3h3.1c.2 1.8 1.2 3 2.9 3.6v3.1a8.3 8.3 0 0 1-2.9-1V15a5.5 5.5 0 1 1-5.5-5.5c.4 0 .8 0 1.2.1v3.2a2.3 2.3 0 1 0 1.2 2.2V3Z"/></svg></span>;
 }
@@ -42,7 +38,7 @@ export function AddressBar() {
         <PortalLink href="https://www.youtube.com" title="YouTube" label="YouTube"><Image src="/images/youtube_s.svg" width={20} height={20} alt="" aria-hidden="true" /></PortalLink>
         <PortalLink href="https://www.instagram.com" title="Instagram" label="Instagram"><Image src="/images/instagram_s.svg" width={20} height={20} alt="" aria-hidden="true" /></PortalLink>
         <PortalLink href="https://www.facebook.com" title="Facebook" label="Facebook"><Image src="/images/facebook_s.svg" width={20} height={20} alt="" aria-hidden="true" /></PortalLink>
-        <PortalLink href="https://twitter.com" title="X (Twitter)" label="Twitter"><XIcon /></PortalLink>
+        <PortalLink href="https://twitter.com" title="X (Twitter)" label="Twitter"><Image src="/images/x_s.svg" width={18} height={18} alt="" aria-hidden="true" /></PortalLink>
         <PortalLink href="https://www.tiktok.com" title="TikTok" label="TikTok"><TikTokIcon /></PortalLink>
       </div>
     </div>

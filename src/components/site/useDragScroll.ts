@@ -4,6 +4,7 @@ import { useEffect } from 'react';
 
 const DRAG_THRESHOLD_PX = 4;
 const DRAG_SPEED = 2;
+// Unlike the original design, leaving the container resets drag state so later clicks are not suppressed.
 
 export function useDragScroll(ref: React.RefObject<HTMLElement | null>, itemSelector: string) {
   useEffect(() => {
@@ -22,8 +23,13 @@ export function useDragScroll(ref: React.RefObject<HTMLElement | null>, itemSele
       scrollLeft = container.scrollLeft;
     };
 
-    const stopDragging = () => {
+    const handleMouseUp = () => {
       isDown = false;
+    };
+
+    const handleMouseLeave = () => {
+      isDown = false;
+      hasDragged = false;
     };
 
     const handleMouseMove = (event: MouseEvent) => {
@@ -47,15 +53,15 @@ export function useDragScroll(ref: React.RefObject<HTMLElement | null>, itemSele
 
     container.addEventListener('mousedown', handleMouseDown);
     container.addEventListener('mousemove', handleMouseMove);
-    container.addEventListener('mouseup', stopDragging);
-    container.addEventListener('mouseleave', stopDragging);
+    container.addEventListener('mouseup', handleMouseUp);
+    container.addEventListener('mouseleave', handleMouseLeave);
     container.addEventListener('click', suppressDraggedClick, true);
 
     return () => {
       container.removeEventListener('mousedown', handleMouseDown);
       container.removeEventListener('mousemove', handleMouseMove);
-      container.removeEventListener('mouseup', stopDragging);
-      container.removeEventListener('mouseleave', stopDragging);
+      container.removeEventListener('mouseup', handleMouseUp);
+      container.removeEventListener('mouseleave', handleMouseLeave);
       container.removeEventListener('click', suppressDraggedClick, true);
     };
   }, [itemSelector, ref]);
