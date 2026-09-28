@@ -1,4 +1,5 @@
 'use client';
+// (legacy)↔(main) route group 간 CSS 누수 방지 — 하드 내비게이션 필수
 /* eslint-disable @next/next/no-html-link-for-pages */
 
 import { useState, useEffect } from 'react';
