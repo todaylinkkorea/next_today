@@ -6,6 +6,7 @@ import { searchSites } from '../../lib/link-data'
 import { useSiteUi } from './SiteUiProvider'
 import { useLayer } from './useLayer'
 import { CategoryIcon } from './CategoryIcon'
+import { exitHref, EXIT_LINK_REL } from '../../lib/exit-link'
 
 function SearchResults() {
   const [term, setTerm] = useState('')
@@ -40,9 +41,9 @@ function SearchResults() {
           <a
             key={`${site.categorySlug}${site.url}`}
             className="search-result-row"
-            href={`/exit?url=${encodeURIComponent(site.url)}`}
+            href={exitHref(site.url)}
             target="_blank"
-            rel="nofollow noopener"
+            rel={EXIT_LINK_REL}
             onClick={closeSearch}
           >
             <div style={{ display: 'flex', alignItems: 'center', gap: '10px', minWidth: 0 }}>

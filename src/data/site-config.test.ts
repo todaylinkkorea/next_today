@@ -1,11 +1,19 @@
 import assert from 'node:assert/strict';
 import test from 'node:test';
+import categoriesJson from './categories.json' with { type: 'json' };
 import { ITEMS_PER_CATEGORY } from '../lib/link-data.ts';
+import { categorySlugs, parseLinkData } from '../lib/link-data.ts';
 import {
+  FEATURED_SLUGS,
   RANK_LIMIT,
   SEARCH_ENGINES,
   buildEngineSearchUrl,
 } from './site-config.ts';
+
+test('featured slugs exist in categories.json', () => {
+  const slugs = categorySlugs(parseLinkData(categoriesJson));
+  for (const slug of FEATURED_SLUGS) assert.ok(slugs.includes(slug));
+});
 
 test('RANK_LIMIT equals ITEMS_PER_CATEGORY', () => {
   assert.equal(RANK_LIMIT, ITEMS_PER_CATEGORY);
