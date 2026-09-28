@@ -1,4 +1,4 @@
-import Link from 'next/link';
+/* eslint-disable @next/next/no-html-link-for-pages */
 
 export default function Footer() {
   return (
@@ -6,12 +6,12 @@ export default function Footer() {
       <div className="footer-inner">
         <nav aria-label="사이트 맵">
           <ul className="footer-links" role="list">
-            <li><Link href="/">홈</Link></li>
-            <li><Link href="#banners">인기링크</Link></li>
-            <li><Link href="#categories">카테고리</Link></li>
-            <li><Link href="#rank-section">바로가기</Link></li>
-            <li><Link href="/articles">Docs</Link></li>
-            <li><Link href="/about">소개</Link></li>
+            <li><a href="/">홈</a></li>
+            <li><a href="#banners">인기링크</a></li>
+            <li><a href="#categories">카테고리</a></li>
+            <li><a href="#rank-section">바로가기</a></li>
+            <li><a href="/articles">Docs</a></li>
+            <li><a href="/about">소개</a></li>
           </ul>
         </nav>
         <p>

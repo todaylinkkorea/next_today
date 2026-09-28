@@ -1,7 +1,7 @@
 'use client';
+/* eslint-disable @next/next/no-html-link-for-pages */
 
 import { useState, useEffect } from 'react';
-import Link from 'next/link';
 import Image from 'next/image';
 
 export default function Header() {
@@ -43,9 +43,9 @@ export default function Header() {
             텔레그램 문의
           </a>
         </div>
-        <Link href="/" className="brand" aria-label="오늘링크 홈으로 이동">
+        <a href="/" className="brand" aria-label="오늘링크 홈으로 이동">
           <Image src="/images/logo.png" alt="오늘링크" className="brand-logo" width={140} height={36} priority />
-        </Link>
+        </a>
         <div className="topbar-right">
           <div className="topbar-clock" aria-label="현재 시각">
             <span>{timeStr.date}</span><br />

@@ -1,8 +1,5 @@
 import type { Metadata } from 'next';
 import Script from 'next/script';
-import Header from '@/components/layout/Header';
-import Footer from '@/components/layout/Footer';
-import './globals.css';
 
 export const metadata: Metadata = {
   title: '오늘링크 — 주소모아, 주소월드의 새로운 기준 (링크 디렉토리)',
@@ -45,8 +42,6 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="ko">
-      <head>
-      </head>
       <body>
         <script
           type="application/ld+json"
@@ -87,11 +82,7 @@ export default function RootLayout({
           {`window.plausible=window.plausible||function(){(plausible.q=plausible.q||[]).push(arguments)},plausible.init=plausible.init||function(i){plausible.o=i||{}};
 plausible.init();`}
         </Script>
-        <Header />
-        <div className="container">
-          <main id="main-content">{children}</main>
-        </div>
-        <Footer />
+        {children}
       </body>
     </html>
   );
