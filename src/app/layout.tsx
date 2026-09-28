@@ -1,5 +1,6 @@
 import type { Metadata } from 'next';
 import Script from 'next/script';
+import { TELEGRAM_URL } from '@/data/site-config';
 
 export const metadata: Metadata = {
   title: '오늘링크 — 주소모아, 주소월드의 새로운 기준 (링크 디렉토리)',
@@ -67,7 +68,7 @@ export default function RootLayout({
                   'url': 'https://xn--wh1bv9k05k4kk.com',
                   'logo': 'https://xn--wh1bv9k05k4kk.com/images/logo.png',
                   'sameAs': [
-                    'https://t.me/famas09'
+                    TELEGRAM_URL
                   ]
                 }
               ]
