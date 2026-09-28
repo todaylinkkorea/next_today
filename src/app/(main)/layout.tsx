@@ -8,6 +8,7 @@ import { SiteHeader } from '@/components/site/SiteHeader';
 import { SiteUiProvider } from '@/components/site/SiteUiProvider';
 import { Toast } from '@/components/site/Toast';
 import { TopUtilityBar } from '@/components/site/TopUtilityBar';
+import { PRETENDARD_CSS_INTEGRITY, PRETENDARD_CSS_URL } from '@/data/site-config';
 
 export default function MainLayout({ children }: Readonly<{ children: React.ReactNode }>) {
   return (
@@ -15,7 +16,9 @@ export default function MainLayout({ children }: Readonly<{ children: React.Reac
       <link rel="preconnect" href="https://cdn.jsdelivr.net" crossOrigin="" />
       <link
         rel="stylesheet"
-        href="https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.9/dist/web/static/pretendard.min.css"
+        href={PRETENDARD_CSS_URL}
+        integrity={PRETENDARD_CSS_INTEGRITY}
+        crossOrigin="anonymous"
         precedence="default"
       />
       <SiteUiProvider>

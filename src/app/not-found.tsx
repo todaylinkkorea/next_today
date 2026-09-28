@@ -1,6 +1,7 @@
 import type { Metadata } from 'next';
 import '@/styles/todaylink.css';
 import { LINK_CATEGORIES } from '@/data/link-data';
+import { PRETENDARD_CSS_INTEGRITY, PRETENDARD_CSS_URL } from '@/data/site-config';
 
 export const metadata: Metadata = {
   title: '페이지를 찾을 수 없음 | 오늘링크',
@@ -13,7 +14,9 @@ export default function NotFound() {
       <link rel="preconnect" href="https://cdn.jsdelivr.net" crossOrigin="" />
       <link
         rel="stylesheet"
-        href="https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.9/dist/web/static/pretendard.min.css"
+        href={PRETENDARD_CSS_URL}
+        integrity={PRETENDARD_CSS_INTEGRITY}
+        crossOrigin="anonymous"
         precedence="default"
       />
       <main
