@@ -20,9 +20,10 @@ export function isSafeHttpUrl(url: string): boolean {
 }
 
 export function parseExitTarget(param: string | null): string | null {
-  if (!param || !isSafeHttpUrl(param)) {
+  const target = param?.trim();
+  if (!target || !isSafeHttpUrl(target)) {
     return null;
   }
 
-  return param;
+  return target;
 }

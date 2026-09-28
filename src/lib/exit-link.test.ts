@@ -22,6 +22,11 @@ test('isSafeHttpUrl rejects javascript/data/vbscript', () => {
   }
 });
 
+test('isSafeHttpUrl rejects schemes split by tab/newline', () => {
+  assert.equal(isSafeHttpUrl('java\tscript:alert(1)'), false);
+  assert.equal(isSafeHttpUrl('java\nscript:alert(1)'), false);
+});
+
 test('isSafeHttpUrl rejects relative, protocol-relative and empty', () => {
   for (const url of ['', '   ', '/path', '//evil.com', 'example.com', 'ftp://x.com']) {
     assert.equal(isSafeHttpUrl(url), false);
@@ -38,6 +43,10 @@ test('parseExitTarget roundtrips exitHref for urls containing %', () => {
   const param = new URL('http://h' + exitHref(url)).searchParams.get('url');
 
   assert.equal(parseExitTarget(param), url);
+});
+
+test('parseExitTarget trims surrounding whitespace', () => {
+  assert.equal(parseExitTarget('  https://a.com  '), 'https://a.com');
 });
 
 test('parseExitTarget returns null for null/empty/javascript', () => {

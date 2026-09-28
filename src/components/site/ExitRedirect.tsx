@@ -47,7 +47,7 @@ export function ExitRedirect() {
   const host = new URL(target).host;
 
   return (
-    <section className="toss-modal-sheet">
+    <section className="toss-modal-sheet" role="status">
       <span className="toss-badge-chip">🔗 외부 사이트로 이동</span>
       <h1 className="toss-modal-title">외부 사이트로 이동 중</h1>
       <p className="toss-modal-subtitle">
@@ -64,6 +64,9 @@ export function ExitRedirect() {
         <button type="button" className="pill-action-btn" onClick={() => router.back()}>
           돌아가기
         </button>
+        {/* The main route group intentionally uses a native anchor to avoid legacy CSS leakage. */}
+        {/* eslint-disable-next-line @next/next/no-html-link-for-pages */}
+        <a href="/" className="pill-action-btn">홈으로</a>
       </div>
     </section>
   );
