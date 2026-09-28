@@ -19,10 +19,10 @@ function PartnerIcon() {
 function InquiryCard() {
   return (
     <a className="partner-banner-card" href={TELEGRAM_URL} target="_blank" rel="noopener noreferrer">
-      <h4 className="p-banner-title">
+      <div className="p-banner-title">
         <PartnerIcon />
         <span className="ellipsis-box">배너문의</span>
-      </h4>
+      </div>
       <div className="p-banner-cta">문의하기 ↗</div>
     </a>
   );
