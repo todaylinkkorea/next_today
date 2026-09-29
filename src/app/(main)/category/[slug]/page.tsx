@@ -13,7 +13,8 @@ interface CategoryPageProps {
   params: Promise<{ slug: string }>;
 }
 
-export const dynamicParams = false;
+// Workers(OpenNext)에는 incremental cache가 없어 false면 프리렌더 캐시 미스로 404가 되므로 true로 설정하고, 미지 slug는 아래 notFound()가 404 처리한다.
+export const dynamicParams = true;
 
 export function generateStaticParams() {
   return categorySlugs(LINK_CATEGORIES).map((slug) => ({ slug }));
