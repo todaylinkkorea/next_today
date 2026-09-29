@@ -1067,10 +1067,9 @@
       z-index: calc(var(--z-drawer) + 1);
       display: flex;
       flex-direction: column;
-      box-shadow: 10px 0 40px rgba(0, 0, 0, 0.15);
-      transition: left 0.32s cubic-bezier(0.16, 1, 0.3, 1);
+      transition: left 0.32s cubic-bezier(0.16, 1, 0.3, 1), box-shadow 0.32s cubic-bezier(0.16, 1, 0.3, 1);
     }
-    .sidebar-drawer-panel.active { left: 0; }
+    .sidebar-drawer-panel.active { left: 0; box-shadow: 10px 0 40px rgba(0, 0, 0, 0.15); }
 
     .sidebar-drawer-head {
       padding: 16px 18px;
