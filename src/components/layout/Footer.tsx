@@ -11,7 +11,6 @@ export default function Footer() {
             <li><a href="#banners">인기링크</a></li>
             <li><a href="#categories">카테고리</a></li>
             <li><a href="#rank-section">바로가기</a></li>
-            <li><a href="/articles">Docs</a></li>
             <li><a href="/about">소개</a></li>
           </ul>
         </nav>

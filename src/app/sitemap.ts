@@ -1,8 +1,7 @@
 import type { MetadataRoute } from 'next';
-import { getPosts } from '@/lib/wp';
 import { LINK_CATEGORIES } from '@/data/link-data';
 
-export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
+export default function sitemap(): MetadataRoute.Sitemap {
   const baseUrl = 'https://xn--wh1bv9k05k4kk.com';
 
   const staticRoutes: MetadataRoute.Sitemap = [
@@ -11,12 +10,6 @@ export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
       lastModified: new Date(),
       changeFrequency: 'daily',
       priority: 1,
-    },
-    {
-      url: `${baseUrl}/articles`,
-      lastModified: new Date(),
-      changeFrequency: 'weekly',
-      priority: 0.8,
     },
     {
       url: `${baseUrl}/about`,
@@ -33,18 +26,5 @@ export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
     priority: 0.9,
   }));
 
-  try {
-    const posts = await getPosts(1, 100);
-    const postRoutes: MetadataRoute.Sitemap = posts.map((post) => ({
-      url: `${baseUrl}/${post.slug}`,
-      lastModified: post.date ? new Date(post.date) : new Date(),
-      changeFrequency: 'weekly',
-      priority: 0.6,
-    }));
-
-    return [...staticRoutes, ...categoryRoutes, ...postRoutes];
-  } catch (err) {
-    console.error('Error generating dynamic sitemap:', err);
-    return [...staticRoutes, ...categoryRoutes];
-  }
+  return [...staticRoutes, ...categoryRoutes];
 }

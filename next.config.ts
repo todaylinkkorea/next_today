@@ -2,6 +2,10 @@ import type { NextConfig } from "next";
 
 const nextConfig: NextConfig = {
   /* config options here */
+  // WordPress 글 목록 폐기(2026-09-30) — 색인된 /articles 는 메인으로 보낸다.
+  async redirects() {
+    return [{ source: '/articles', destination: '/', permanent: true }];
+  },
   async headers() {
     return [
       {

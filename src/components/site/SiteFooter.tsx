@@ -18,11 +18,7 @@ export function SiteFooter() {
             Copyright © 2026 오늘링크. All rights reserved.
           </p>
           <p style={{ fontSize: 10, color: 'var(--text-muted)', margin: 0, textAlign: 'center' }}>
-            {/* eslint-disable-next-line @next/next/no-html-link-for-pages -- route-group navigation intentionally uses plain anchors. */}
             <a href="/about" style={{ color: 'var(--text-muted)' }}>소개</a>
-            <span aria-hidden="true"> · </span>
-            {/* eslint-disable-next-line @next/next/no-html-link-for-pages -- route-group navigation intentionally uses plain anchors. */}
-            <a href="/articles" style={{ color: 'var(--text-muted)' }}>Docs</a>
           </p>
         </div>
       </footer>
